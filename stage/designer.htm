@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet">
 	<title>Stage Striking - Smash 4</title>
 </head>
 <body>
 	<div id="container">
-		<h1>Stage Striking - Smash 4 <span class="version">beta<img style="display:none" name="you didnt see me..."></span></h1>
+		<h1>STAGE STRIKING - SMASH 4 <span class="version">&beta;<img style="display:none" name="you didnt see me..."></span></h1>
 		<div class="row">
 			<img style="background-image:url('img/1.png')" src="img/blank.png"><img style="background-image:url('img/2.png')" src="img/blank.png"><img style="background-image:url('img/3.png')" src="img/blank.png"><img style="background-image:url('img/4.png')" src="img/blank.png"><img style="background-image:url('img/5.png')" src="img/blank.png"><img style="background-image:url('img/6.png')" src="img/blank.png">
 		</div>
@@ -29,13 +30,14 @@
 			<img style="background-image:url('img/35.png')" src="img/blank.png"><img style="background-image:url('img/36.png')" src="img/blank.png"><img style="background-image:url('img/37.png')" src="img/blank.png">
 		</div>
 		<br>
-		<div>
-			<button id="ban">Ban all</button> <button id="unban">Unban all</button> <button id="generate">Generate code</button> Copy the text in the box below to enter into the <a href="index.htm">Stage Striker</a>.
-			<br><br>
-			<div><textarea></textarea></div>
-			<div>
-				Click on a stage to cycle through the options (blank &#8594 starter &#8594 counterpick &#8594 banned). Once you have chosen what you want your ruleset to be, click on generate code for usage on the stage striker. All blank and banned stages will be considered banned.
-			</div>
+		<div class="text">
+			<button id="ban">Ban all</button> <button id="unban">Unban all</button> <button id="generate">Generate code</button> <input type="text" id="code">
+		</div>
+		<div class="text">
+			Click on a stage to cycle through the options (blank &raquo; starter &raquo; counterpick &raquo; banned). Once you have chosen what you want your ruleset to be, click on generate code to get a series of numbers. Copy the text and paste it in the <a href="index.htm">Stage Striker</a>'s code box. All blank and banned stages will be considered banned.
+		</div>
+		<div class="text">
+			<a href="../index.htm">Smash Apps</a> - <a href="https://github.com/quetzle/smash-apps">Github page</a>
 		</div>
 	</div>
 	
@@ -74,7 +76,7 @@
 				$("img").attr("src","img/blank.png");
 			});
 			$("#generate").click(function () {
-				$("textarea").text(starters + "|" + counterpicks);
+				$("#code").val(starters + "|" + counterpicks);
 			});
 		});
 	</script>

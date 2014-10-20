@@ -1,5 +1,10 @@
 body {
-	font-family: sans-serif;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-style: italic;
+	font-weight: 100;
 }
 
 #container {
@@ -34,4 +39,8 @@ img {
 
 textarea {
 	width: 774px;
+}
+
+.text {
+	margin: 9px 0;
 }
