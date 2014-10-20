@@ -47,6 +47,9 @@
 			&ndash; Input preset: <input type="text" id="code"> <button id="preset">Go</button>
 			&ndash; <a href="designer.htm">Preset designer</a>
 		</div>
+		<div>
+			Select the stages you want to ban by clicking on them. Select a preset in the dropdown below or design one in the designer.
+		</div>
 	</div>
 	
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -54,6 +57,7 @@
 		var separate = [];
 		var starters = [];
 		var counterpicks = [];
+		
 		$(document).ready(function() {
 			$("img").click(function () {
 				if ($(this).attr("src") == "img/strike.png") {
