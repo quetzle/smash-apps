@@ -45,7 +45,7 @@
 					<option value="dlarge">Large</option>
 				</optgroup>
 			</select>
-			&ndash; Input preset: <input type="text" id="code"> <button id="preset">Go</button>
+			&ndash; Input preset: <input type="text" id="code">
 			&ndash; <a href="designer.htm">Preset designer</a>
 		</div>
 		<div class="text">
@@ -70,7 +70,7 @@
 					$(this).attr("src","img/strike.png");
 				}
 			});
-			$("#preset").click(function () {
+			$("#code").on('input propertychange paste', function () {
 				separate = $("#code").val().split("|");
 				starters = separate[0].split(",").map(Number);
 				counterpicks = separate[1].split(",").map(Number);
