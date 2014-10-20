@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet">
+	<title>Stage Striking - Smash 4</title>
+</head>
+<body>
+	<div id="container">
+		<h1>Stage Striking - Smash 4 <span class="version">beta<img style="display:none" name="you didnt see me..."></span></h1>
+		<div class="row">
+			<img style="background-image:url('img/1.png')" src="img/blank.png"><img style="background-image:url('img/2.png')" src="img/blank.png"><img style="background-image:url('img/3.png')" src="img/blank.png"><img style="background-image:url('img/4.png')" src="img/blank.png"><img style="background-image:url('img/5.png')" src="img/blank.png"><img style="background-image:url('img/6.png')" src="img/blank.png">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/7.png')" src="img/blank.png"><img style="background-image:url('img/8.png')" src="img/blank.png"><img style="background-image:url('img/9.png')" src="img/blank.png"><img style="background-image:url('img/10.png')" src="img/blank.png"><img style="background-image:url('img/11.png')" src="img/blank.png"><img style="background-image:url('img/12.png')" src="img/blank.png">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/13.png')" src="img/blank.png"><img style="background-image:url('img/14.png')" src="img/blank.png"><img style="background-image:url('img/15.png')" src="img/blank.png"><img style="background-image:url('img/16.png')" src="img/blank.png"><img style="background-image:url('img/17.png')" src="img/blank.png"><img style="background-image:url('img/18.png')" src="img/blank.png">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/19.png')" src="img/blank.png"><img style="background-image:url('img/20.png')" src="img/blank.png"><img style="background-image:url('img/21.png')" src="img/blank.png"><img style="background-image:url('img/22.png')" src="img/blank.png"><img style="background-image:url('img/23.png')" src="img/blank.png"><img style="background-image:url('img/24.png')" src="img/blank.png">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/25.png')" src="img/blank.png"><img style="background-image:url('img/26.png')" src="img/blank.png"><img style="background-image:url('img/27.png')" src="img/blank.png"><img style="background-image:url('img/28.png')" src="img/blank.png"><img style="background-image:url('img/29.png')" src="img/blank.png"><img style="background-image:url('img/30.png')" src="img/blank.png">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/31.png')" src="img/blank.png"><img style="background-image:url('img/32.png')" src="img/blank.png"><img style="background-image:url('img/33.png')" src="img/blank.png"><img style="background-image:url('img/34.png')" src="img/blank.png">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/35.png')" src="img/blank.png"><img style="background-image:url('img/36.png')" src="img/blank.png"><img style="background-image:url('img/37.png')" src="img/blank.png">
+		</div>
+		<br>
+		<div>
+			<button id="ban">Ban all</button> <button id="unban">Unban all</button> <button id="generate">Generate code</button> Copy the text in the box below to enter into the <a href="index.htm">Stage Striker</a>
+			<br><br>
+			<div><textarea></textarea></div>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		var starters = [];
+		var counterpicks = [];
+		
+		$(document).ready(function() {
+			$("img").click(function () {
+				if ($(this).attr("src") == "img/starter.png") {
+					$(this).attr("src","img/counterpick.png");
+					var index = $("img").index($(this));
+					counterpicks.push(index);
+					if (starters.indexOf(index) > -1) {
+						starters.splice(starters.indexOf(index),1);
+					}
+				} else if ($(this).attr("src") == "img/counterpick.png") {
+					$(this).attr("src","img/strike.png");
+					var index = $("img").index($(this));
+					if (counterpicks.indexOf(index) > -1) {
+						counterpicks.splice(counterpicks.indexOf(index),1);
+					}
+				} else if ($(this).attr("src") == "img/strike.png") {
+					$(this).attr("src","img/blank.png");
+				} else if ($(this).attr("src") == "img/blank.png") {
+					$(this).attr("src","img/starter.png");
+					var index = $("img").index($(this));
+					starters.push(index);
+				}
+			});
+			$("#ban").click(function () {
+				$("img").attr("src","img/strike.png");
+			});
+			$("#unban").click(function () {
+				$("img").attr("src","img/blank.png");
+			});
+			$("#generate").click(function () {
+				$("textarea").text(starters + "|" + counterpicks);
+			});
+		});
+	</script>
+</body>
+</html>
