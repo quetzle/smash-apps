@@ -18,7 +18,7 @@ h1 {
 	text-align: left;
 }
 
-input {
+input[type="text"] {
 	height: 94px;
 	width: 48px;
 	text-align: center;
@@ -39,6 +39,10 @@ input {
 	height: 96px;
 	width: 96px;
 	background-color: #dedede;
+}
+
+.checkboxes {
+	margin: 10px 0;
 }
 
 .tier1 {
