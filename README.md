@@ -7,4 +7,5 @@ A collection of useful apps for Super Smash Bros.
 
 Currently, the apps are:
 
-* Stage Striking - eventually planned for other Smash games!
+* Stage Striking - choose what stage to play on by banning certain stages!
+* Tier List Maker - create a tier list to show how you think the characters stack up!
