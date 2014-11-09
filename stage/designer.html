@@ -72,9 +72,15 @@
 			});
 			$("#ban").click(function () {
 				$("img").attr("src","img/strike.png");
+				starters = [];
+				counterpicks = [];
+				$("#code").val(starters + "|" + counterpicks);
 			});
 			$("#unban").click(function () {
 				$("img").attr("src","img/blank.png");
+				starters = [];
+				counterpicks = [];
+				$("#code").val(starters + "|" + counterpicks);
 			});
 			$("#code").focus(function () {
 				$(this).select();
