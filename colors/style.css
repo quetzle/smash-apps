@@ -1,0 +1,85 @@
+body {
+	font-family: 'Roboto', sans-serif;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+h1 {
+	width: 816px;
+	margin: 10px auto;
+	font-style: italic;
+	font-weight: 100;
+	padding-right: 1px;
+	text-align: left;
+}
+
+h3 {
+	font-style: italic;
+	font-weight: 100;
+	margin-top: 20px;
+}
+
+.costume {
+	height: 188px;
+	width: 136px;
+	display: inline-block;
+	text-align: center;
+}
+
+.move {
+	height: 12px;
+	margin: 188px 0 0 0;
+	background: white;
+	font-size: 1.5em;
+}
+
+#col1, #col2 {
+	display: inline-block;
+	width: 816px;
+}
+
+.controls {
+	text-align: center;
+	margin-top: 20px;
+}
+
+/* Costume image background styles */
+
+/* Fox */				.fox0{background:url('img/fox0.png');}
+						.fox1{background:url('img/fox1.png');}
+						.fox2{background:url('img/fox2.png');}
+						.fox3{background:url('img/fox3.png');}
+/* Falco */				.falco0{background:url('img/falco0.png');}
+						.falco1{background:url('img/falco1.png');}
+						.falco2{background:url('img/falco2.png');}
+						.falco3{background:url('img/falco3.png');}
+/* Sheik */				.sheik0{background:url('img/sheik0.png');}
+						.sheik1{background:url('img/sheik1.png');}
+						.sheik2{background:url('img/sheik2.png');}
+						.sheik3{background:url('img/sheik3.png');}
+						.sheik4{background:url('img/sheik4.png');}
+/* Marth */				.marth0{background:url('img/marth0.png');}
+						.marth1{background:url('img/marth1.png');}
+						.marth2{background:url('img/marth2.png');}
+						.marth3{background:url('img/marth3.png');}
+						.marth4{background:url('img/marth4.png');}
+/* Jigglypuff */		.jiggly0{background:url('img/jiggly0.png');}
+						.jiggly1{background:url('img/jiggly1.png');}
+						.jiggly2{background:url('img/jiggly2.png');}
+						.jiggly3{background:url('img/jiggly3.png');}
+						.jiggly4{background:url('img/jiggly4.png');}
+/* Peach */				.peach0{background:url('img/peach0.png');}
+						.peach1{background:url('img/peach1.png');}
+						.peach2{background:url('img/peach2.png');}
+						.peach3{background:url('img/peach3.png');}
+						.peach4{background:url('img/peach4.png');}
+/* Captain Falcon */	.captain0{background:url('img/captain0.png');}
+						.captain1{background:url('img/captain1.png');}
+						.captain2{background:url('img/captain2.png');}
+						.captain3{background:url('img/captain3.png');}
+						.captain4{background:url('img/captain4.png');}
+						.captain5{background:url('img/captain5.png');}
+/* Ice Climbers */		.icies0{background:url('img/icies0.png');}
+						.icies1{background:url('img/icies1.png');}
+						.icies2{background:url('img/icies2.png');}
+						.icies3{background:url('img/icies3.png');}
