@@ -15,7 +15,12 @@ h1 {
 .row {
 	height: 96px;
 	border: solid 1px #dedede; /* the official color of smash */
+	border-bottom: 0;
 	text-align: left;
+}
+
+.last {
+	border-bottom: solid 1px #dedede;
 }
 
 input[type="text"] {
