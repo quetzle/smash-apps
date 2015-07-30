@@ -87,6 +87,11 @@ input[type="text"] {
 	margin: 10px auto;
 }
 
+#charM {
+	width: 900px;
+	margin: 10px auto;
+}
+
 #charPM {
 	width: 756px;
 	margin: 8px auto 10px auto;

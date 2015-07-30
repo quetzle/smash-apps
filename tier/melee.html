@@ -6,7 +6,7 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-	<h1>TIER LIST MAKER - SMASH 4</h1>
+	<h1>TIER LIST MAKER - MELEE</h1>
 	<div class="row">
 		<input type="text" value="S" class="tier1">
 		<div class="tier sort"></div>
@@ -38,16 +38,16 @@
 
 	<div class="checkboxes"><input type="checkbox" checked="true">Tier 1 &nbsp; <input type="checkbox" checked="true">Tier 2 &nbsp; <input type="checkbox" checked="true">Tier 3 &nbsp; <input type="checkbox" checked="true">Tier 4 &nbsp; <input type="checkbox" checked="true">Tier 5 &nbsp; <input type="checkbox" checked="true">Tier 6 &nbsp; <input type="checkbox" checked="true">Tier 7 &nbsp; <a href="javascript:void()" id="help" class="hidden">Show help</a></div>
 	<div style="width:774px;display:none;text-align:left;margin:0px auto;" id="helptext">
-		Click and drag on the images to rearrange them across the different tiers. You can edit the name of each tier by clicking on the letter to the left. By default, there are 7 tiers, but you can disable them as you wish by clicking on the corresponding checkboxes above. If you disable a tier when characters are still in it, they will be moved to the character box below. Check out the other apps at <a href="../">Smash Apps</a>. <a href="melee.html">Melee</a>, <a href="projectm.html">Project M</a>
+		Click and drag on the images to rearrange them across the different tiers. You can edit the name of each tier by clicking on the letter to the left. By default, there are 7 tiers, but you can disable them as you wish by clicking on the corresponding checkboxes above. If you disable a tier when characters are still in it, they will be moved to the character box below. Check out the other apps at <a href="../">Smash Apps</a>. <a href="projectm.html">Project M</a>, <a href="index.html">Smash 4</a>
 	</div>
-	<div id="char4" class="sort">
-		<img src="img/4/mario.png"><img src="img/4/luigi.png"><img src="img/4/peach.png"><img src="img/4/bowser.png"><img src="img/4/bowserjr.png"><img src="img/4/rosalina.png"><img src="img/4/drmario.png"><img src="img/4/yoshi.png"><img src="img/4/wario.png"><img src="img/4/gameandwatch.png"><img src="img/4/donkeykong.png"><img src="img/4/diddykong.png"><img src="img/4/link.png"><img src="img/4/zelda.png"><img src="img/4/sheik.png"><img src="img/4/ganon.png"><img src="img/4/toonlink.png"><img src="img/4/samus.png"><img src="img/4/zerosuit.png"><img src="img/4/pit.png"><img src="img/4/palutena.png"><img src="img/4/darkpit.png"><img src="img/4/marth.png"><img src="img/4/ike.png"><img src="img/4/robin.png"><img src="img/4/lucina.png"><img src="img/4/kirby.png"><img src="img/4/dedede.png"><img src="img/4/metaknight.png"><img src="img/4/littlemac.png"><img src="img/4/fox.png"><img src="img/4/falco.png"><img src="img/4/pikachu.png"><img src="img/4/charizard.png"><img src="img/4/lucario.png"><img src="img/4/jigglypuff.png"><img src="img/4/greninja.png"><img src="img/4/duckhunt.png"><img src="img/4/rob.png"><img src="img/4/ness.png"><img src="img/4/captainfalcon.png"><img src="img/4/villager.png"><img src="img/4/olimar.png"><img src="img/4/wiifit.png"><img src="img/4/shulk.png"><img src="img/4/megaman.png"><img src="img/4/pacman.png"><img src="img/4/sonic.png"><img src="img/4/miibrawl.png"><img src="img/4/miigun.png"><img src="img/4/miisword.png"><img src="img/4/mewtwo.png"><img src="img/4/lucas.png"><img src="img/4/roy.png"><img src="img/4/ryu.png">
+	<div id="charM" class="sort">
+		<img src="img/melee/doc.png"><img src="img/melee/mario.png"><img src="img/melee/luigi.png"><img src="img/melee/bowser.png"><img src="img/melee/peach.png"><img src="img/melee/yoshi.png"><img src="img/melee/dank.png"><img src="img/melee/captain.png"><img src="img/melee/ganon.png"><img src="img/melee/falco.png"><img src="img/melee/fox.png"><img src="img/melee/ness.png"><img src="img/melee/icies.png"><img src="img/melee/kirby.png"><img src="img/melee/samus.png"><img src="img/melee/zelda.png"><img src="img/melee/link.png"><img src="img/melee/ylink.png"><img src="img/melee/pichu.png"><img src="img/melee/pika.png"><img src="img/melee/jiggly.png"><img src="img/melee/mewtwo.png"><img src="img/melee/gnw.png"><img src="img/melee/marth.png"><img src="img/melee/roy.png">
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="jquery-ui.min.js"></script>
 	<script>
 		$(document).ready(function () {
-			$(".tier, #char4").sortable({
+			$(".tier, #charM").sortable({
 				connectWith: ".sort",
 				placeholder: "placeholder4",
 				revert: 100,
@@ -57,7 +57,7 @@
 				if (!this.checked) {
 					var check = $("input[type='checkbox']").index(this);
 					$(".row:eq(" + check + ")").hide();
-					$("#char4").append($(".row:eq(" + check + ")").find("img"));
+					$("#charM").append($(".row:eq(" + check + ")").find("img"));
 				} else {
 					var check = $("input[type='checkbox']").index(this);
 					$(".row:eq(" + check + ")").show();
