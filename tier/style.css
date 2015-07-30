@@ -19,6 +19,10 @@ h1 {
 	text-align: left;
 }
 
+.rowPM {
+	height: 56px;
+}
+
 .last {
 	border-bottom: solid 1px #dedede;
 }
@@ -34,6 +38,10 @@ input[type="text"] {
 	vertical-align: top;
 }
 
+input[type="text"].levelPM {
+	height: 54px;
+}
+
 .tier {
 	min-width: 1248px;
 	height: 96px;
@@ -41,7 +49,7 @@ input[type="text"] {
 }
 
 .tierPM {
-	padding-top: 20px;
+	height: 56px;
 }
 
 .placeholder4 {
@@ -90,6 +98,11 @@ input[type="text"] {
 #charM {
 	width: 900px;
 	margin: 10px auto;
+}
+
+#charM img, .melee div div img {
+	width: 96px;
+	height: 96px;
 }
 
 #charPM {
