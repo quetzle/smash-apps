@@ -47,12 +47,13 @@
 	<script src="jquery-ui.min.js"></script>
 	<script>
 		$(document).ready(function () {
+			$("body").disableSelection();
 			$(".tier, #char4").sortable({
 				connectWith: ".sort",
 				placeholder: "placeholder4",
 				revert: 100,
 				helper: "clone"
-			}).disableSelection();
+			});
 			$("input[type='checkbox']").click(function() {
 				if (!this.checked) {
 					var check = $("input[type='checkbox']").index(this);

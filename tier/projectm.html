@@ -47,6 +47,7 @@
 	<script src="jquery-ui.min.js"></script>
 	<script>
 		$(document).ready(function () {
+			$("body").disableSelection();
 			$(".tier, #charPM").sortable({
 				connectWith: ".sort",
 				placeholder: "placeholderPM",
