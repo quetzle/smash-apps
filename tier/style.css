@@ -40,9 +40,19 @@ input[type="text"] {
 	display: inline-block;
 }
 
-.placeholder {
+.tierPM {
+	padding-top: 20px;
+}
+
+.placeholder4 {
 	height: 96px;
 	width: 96px;
+	background-color: #dedede;
+}
+
+.placeholderPM {
+	height: 56px;
+	width: 80px;
 	background-color: #dedede;
 }
 
@@ -72,7 +82,17 @@ input[type="text"] {
 	background-color: #c86acb;
 }
 
-#char {
+#char4 {
 	width: 1248px;
 	margin: 10px auto;
+}
+
+#charPM {
+	width: 756px;
+	margin: 8px auto 10px auto;
+	line-height: 0px;
+}
+
+#charPM img {
+	margin: 2px;
 }

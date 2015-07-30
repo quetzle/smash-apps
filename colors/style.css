@@ -22,6 +22,7 @@ h3 {
 	width: 136px;
 	display: inline-block;
 	text-align: center;
+	margin-top: 4px;
 }
 
 .move {
@@ -29,6 +30,14 @@ h3 {
 	margin: 188px 0 0 0;
 	background: white;
 	font-size: 1.5em;
+}
+
+input[type="text"] {
+	height: 16px;
+	width: 132px;
+	text-align: center;
+	display: block;
+	margin-top: 16px;
 }
 
 .col {
