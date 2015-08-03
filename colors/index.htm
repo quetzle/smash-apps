@@ -506,6 +506,26 @@
 					$(".level").css("margin-top", "16px");
 				}
 			});
+
+			$(".level").change(function () {
+				levelVal = $(this).val();
+				if (levelVal == "S")
+					$(this).attr("class","tier1 level");
+				else if (levelVal == "A")
+					$(this).attr("class","tier2 level");
+				else if (levelVal == "B")
+					$(this).attr("class","tier3 level");
+				else if (levelVal == "C")
+					$(this).attr("class","tier4 level");
+				else if (levelVal == "D")
+					$(this).attr("class","tier5 level");
+				else if (levelVal == "E")
+					$(this).attr("class","tier6 level");
+				else if (levelVal == "F")
+					$(this).attr("class","tier7 level");
+				else
+					$(this).attr("class","level");
+			});
 		});
 	</script>
 </body>

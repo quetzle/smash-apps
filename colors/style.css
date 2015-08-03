@@ -52,6 +52,32 @@ input[type="text"] {
 	margin-top: 20px;
 }
 
+.level {
+	border: solid 1px #dedede;
+}
+
+.tier1 {
+	background-color: #ed6764;
+}
+.tier2 {
+	background-color: #f88157;
+}
+.tier3 {
+	background-color: #eae286;
+}
+.tier4 {
+	background-color: #8abc6e;
+}
+.tier5 {
+	background-color: #779fde;
+}
+.tier6 {
+	background-color: #627ee0;
+}
+.tier7 {
+	background-color: #c86acb;
+}
+
 /* Costume image background styles */
 
 /* Fox */				.fox0{background:url('img/fox0.png');}
