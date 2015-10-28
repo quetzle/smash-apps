@@ -1,7 +1,7 @@
 Smash Apps
 ==========
 
-A collection of useful apps for Super Smash Bros.
+A collection of useful web apps for Super Smash Bros.
 
 [Use them!](http://quetzle.github.io/smash-apps)
 
