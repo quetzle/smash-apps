@@ -1,0 +1,205 @@
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	width: 816px;
+	margin: 10px auto;
+	font-style: italic;
+	font-weight: 100;
+	padding-right: 1px;
+	text-align: left;
+}
+
+h3 {
+	font-style: italic;
+	font-weight: 100;
+	margin-top: 20px;
+}
+
+.costume {
+	height: 188px;
+	width: 136px;
+	display: inline-block;
+	text-align: center;
+	margin-top: 4px;
+}
+
+.move {
+	height: 12px;
+	margin: 188px 0 0 0;
+	background: white;
+	font-size: 1.5em;
+}
+
+input[type="text"] {
+	height: 16px;
+	width: 132px;
+	text-align: center;
+	display: block;
+	margin-top: 16px;
+}
+
+.col {
+	display: inline-block;
+	width: 816px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.controls {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.level {
+	border: solid 1px #dedede;
+}
+
+.tier1 {
+	background-color: #ed6764;
+}
+.tier2 {
+	background-color: #f88157;
+}
+.tier3 {
+	background-color: #eae286;
+}
+.tier4 {
+	background-color: #8abc6e;
+}
+.tier5 {
+	background-color: #779fde;
+}
+.tier6 {
+	background-color: #627ee0;
+}
+.tier7 {
+	background-color: #c86acb;
+}
+
+/* Costume image background styles */
+
+/* Fox */				.fox0{background:url('img/fox0.png');}
+						.fox1{background:url('img/fox1.png');}
+						.fox2{background:url('img/fox2.png');}
+						.fox3{background:url('img/fox3.png');}
+/* Falco */				.falco0{background:url('img/falco0.png');}
+						.falco1{background:url('img/falco1.png');}
+						.falco2{background:url('img/falco2.png');}
+						.falco3{background:url('img/falco3.png');}
+/* Sheik */				.sheik0{background:url('img/sheik0.png');}
+						.sheik1{background:url('img/sheik1.png');}
+						.sheik2{background:url('img/sheik2.png');}
+						.sheik3{background:url('img/sheik3.png');}
+						.sheik4{background:url('img/sheik4.png');}
+/* Marth */				.marth0{background:url('img/marth0.png');}
+						.marth1{background:url('img/marth1.png');}
+						.marth2{background:url('img/marth2.png');}
+						.marth3{background:url('img/marth3.png');}
+						.marth4{background:url('img/marth4.png');}
+/* Jigglypuff */		.jiggly0{background:url('img/jiggly0.png');}
+						.jiggly1{background:url('img/jiggly1.png');}
+						.jiggly2{background:url('img/jiggly2.png');}
+						.jiggly3{background:url('img/jiggly3.png');}
+						.jiggly4{background:url('img/jiggly4.png');}
+/* Peach */				.peach0{background:url('img/peach0.png');}
+						.peach1{background:url('img/peach1.png');}
+						.peach2{background:url('img/peach2.png');}
+						.peach3{background:url('img/peach3.png');}
+						.peach4{background:url('img/peach4.png');}
+/* Captain Falcon */	.captain0{background:url('img/captain0.png');}
+						.captain1{background:url('img/captain1.png');}
+						.captain2{background:url('img/captain2.png');}
+						.captain3{background:url('img/captain3.png');}
+						.captain4{background:url('img/captain4.png');}
+						.captain5{background:url('img/captain5.png');}
+/* Ice Climbers */		.icies0{background:url('img/icies0.png');}
+						.icies1{background:url('img/icies1.png');}
+						.icies2{background:url('img/icies2.png');}
+						.icies3{background:url('img/icies3.png');}
+/* Doctor Mario */		.doc0{background:url('img/doc0.png');}
+						.doc1{background:url('img/doc1.png');}
+						.doc2{background:url('img/doc2.png');}
+						.doc3{background:url('img/doc3.png');}
+						.doc4{background:url('img/doc4.png');}
+/* Pikachu */			.pika0{background:url('img/pika0.png');}
+						.pika1{background:url('img/pika1.png');}
+						.pika2{background:url('img/pika2.png');}
+						.pika3{background:url('img/pika3.png');}
+/* Samus */				.samus0{background:url('img/samus0.png');}
+						.samus1{background:url('img/samus1.png');}
+						.samus2{background:url('img/samus2.png');}
+						.samus3{background:url('img/samus3.png');}
+						.samus4{background:url('img/samus4.png');}
+/* Ganon */				.ganon0{background:url('img/ganon0.png');}
+						.ganon1{background:url('img/ganon1.png');}
+						.ganon2{background:url('img/ganon2.png');}
+						.ganon3{background:url('img/ganon3.png');}
+						.ganon4{background:url('img/ganon4.png');}
+/* Luigi */				.luigi0{background:url('img/luigi0.png');}
+						.luigi1{background:url('img/luigi1.png');}
+						.luigi2{background:url('img/luigi2.png');}
+						.luigi3{background:url('img/luigi3.png');}
+/* Mario */				.mario0{background:url('img/mario0.png');}
+						.mario1{background:url('img/mario1.png');}
+						.mario2{background:url('img/mario2.png');}
+						.mario3{background:url('img/mario3.png');}
+						.mario4{background:url('img/mario4.png');}
+/* Young Link */		.ylink0{background:url('img/ylink0.png');}
+						.ylink1{background:url('img/ylink1.png');}
+						.ylink2{background:url('img/ylink2.png');}
+						.ylink3{background:url('img/ylink3.png');}
+						.ylink4{background:url('img/ylink4.png');}
+/* Link */				.link0{background:url('img/link0.png');}
+						.link1{background:url('img/link1.png');}
+						.link2{background:url('img/link2.png');}
+						.link3{background:url('img/link3.png');}
+						.link4{background:url('img/link4.png');}
+/* Donkey Kong */		.dank0{background:url('img/dank0.png');}
+						.dank1{background:url('img/dank1.png');}
+						.dank2{background:url('img/dank2.png');}
+						.dank3{background:url('img/dank3.png');}
+						.dank4{background:url('img/dank4.png');}
+/* Yoshi */				.yoshi0{background:url('img/yoshi0.png');}
+						.yoshi1{background:url('img/yoshi1.png');}
+						.yoshi2{background:url('img/yoshi2.png');}
+						.yoshi3{background:url('img/yoshi3.png');}
+						.yoshi4{background:url('img/yoshi4.png');}
+						.yoshi5{background:url('img/yoshi5.png');}
+/* Zelda */				.zelda0{background:url('img/zelda0.png');}
+						.zelda1{background:url('img/zelda1.png');}
+						.zelda2{background:url('img/zelda2.png');}
+						.zelda3{background:url('img/zelda3.png');}
+						.zelda4{background:url('img/zelda4.png');}
+/* Roy */				.roy0{background:url('img/roy0.png');}
+						.roy1{background:url('img/roy1.png');}
+						.roy2{background:url('img/roy2.png');}
+						.roy3{background:url('img/roy3.png');}
+						.roy4{background:url('img/roy4.png');}
+/* Mewtwo */			.mewtwo0{background:url('img/mewtwo0.png');}
+						.mewtwo1{background:url('img/mewtwo1.png');}
+						.mewtwo2{background:url('img/mewtwo2.png');}
+						.mewtwo3{background:url('img/mewtwo3.png');}
+/* Game and Watch */	.gnw0{background:url('img/gnw0.png');}
+						.gnw1{background:url('img/gnw1.png');}
+						.gnw2{background:url('img/gnw2.png');}
+						.gnw3{background:url('img/gnw3.png');}
+/* Ness */				.ness0{background:url('img/ness0.png');}
+						.ness1{background:url('img/ness1.png');}
+						.ness2{background:url('img/ness2.png');}
+						.ness3{background:url('img/ness3.png');}
+/* Bowser */			.bowser0{background:url('img/bowser0.png');}
+						.bowser1{background:url('img/bowser1.png');}
+						.bowser2{background:url('img/bowser2.png');}
+						.bowser3{background:url('img/bowser3.png');}
+/* Pichu */				.pichu0{background:url('img/pichu0.png');}
+						.pichu1{background:url('img/pichu1.png');}
+						.pichu2{background:url('img/pichu2.png');}
+						.pichu3{background:url('img/pichu3.png');}
+/* Kirby */				.kirby0{background:url('img/kirby0.png');}
+						.kirby1{background:url('img/kirby1.png');}
+						.kirby2{background:url('img/kirby2.png');}
+						.kirby3{background:url('img/kirby3.png');}
+						.kirby4{background:url('img/kirby4.png');}
+						.kirby5{background:url('img/kirby5.png');}

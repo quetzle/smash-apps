@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100italic" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet">
+	<title>Stage Striking - Smash Bros 3DS</title>
+</head>
+<body>
+	<div id="container">
+		<h1>STAGE STRIKING - SMASH BROS 3DS <span class="version">&beta;<img style="display:none"></span></h1>
+		<div class="row">
+			<img style="background-image:url('img/3ds/1.png')" src="img/blank.png" title="Battlefield"><img style="background-image:url('img/3ds/2.png')" src="img/blank.png" title="Final Destination"><img style="background-image:url('img/3ds/3.png')" src="img/blank.png" title="3D Land"><img style="background-image:url('img/3ds/4.png')" src="img/blank.png" title="Golden Plains"><img style="background-image:url('img/3ds/5.png')" src="img/blank.png" title="Rainbow Road"><img style="background-image:url('img/3ds/6.png')" src="img/blank.png" title="Paper Mario">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/3ds/7.png')" src="img/blank.png" title="Mushroomy Kingdom"><img style="background-image:url('img/3ds/8.png')" src="img/blank.png" title="Jungle Japes"><img style="background-image:url('img/3ds/9.png')" src="img/blank.png" title="Gerudo Valley"><img style="background-image:url('img/3ds/10.png')" src="img/blank.png" title="Spirit Train"><img style="background-image:url('img/3ds/11.png')" src="img/blank.png" title="Brinstar"><img style="background-image:url('img/3ds/12.png')" src="img/blank.png" title="Yoshi's Island">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/3ds/13.png')" src="img/blank.png" title="Dream Land"><img style="background-image:url('img/3ds/14.png')" src="img/blank.png" title="Corneria"><img style="background-image:url('img/3ds/15.png')" src="img/blank.png" title="Unova Pokemon League"><img style="background-image:url('img/3ds/16.png')" src="img/blank.png" title="Prism Tower"><img style="background-image:url('img/3ds/17.png')" src="img/blank.png" title="Mute City"><img style="background-image:url('img/3ds/18.png')" src="img/blank.png" title="Magicant">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/3ds/19.png')" src="img/blank.png" title="Arena Ferox"><img style="background-image:url('img/3ds/20.png')" src="img/blank.png" title="Flat Zone 2"><img style="background-image:url('img/3ds/21.png')" src="img/blank.png" title="Reset Bomb Forest"><img style="background-image:url('img/3ds/22.png')" src="img/blank.png" title="WarioWare, Inc."><img style="background-image:url('img/3ds/23.png')" src="img/blank.png" title="Distant Planet"><img style="background-image:url('img/3ds/24.png')" src="img/blank.png" title="Tortimer Island">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/3ds/25.png')" src="img/blank.png" title="Boxing Ring"><img style="background-image:url('img/3ds/26.png')" src="img/blank.png" title="Gaur Plain"><img style="background-image:url('img/3ds/27.png')" src="img/blank.png" title="Balloon Fight"><img style="background-image:url('img/3ds/28.png')" src="img/blank.png" title="Living Room"><img style="background-image:url('img/3ds/29.png')" src="img/blank.png" title="Find Mii"><img style="background-image:url('img/3ds/30.png')" src="img/blank.png" title="Tomodachi Life">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/3ds/31.png')" src="img/blank.png" title="Pictochat"><img style="background-image:url('img/3ds/32.png')" src="img/blank.png" title="Green Hill Zone"><img style="background-image:url('img/3ds/33.png')" src="img/blank.png" title="Wily Castle"><img style="background-image:url('img/3ds/34.png')" src="img/blank.png" title="Pac-Maze">
+		</div>
+		<div class="row">
+			<img style="background-image:url('img/3ds/35.png')" src="img/blank.png" title="Omega Forms"><img style="background-image:url('img/3ds/36.png')" src="img/blank.png" title="Omega Forms - Floating Platforms"><img style="background-image:url('img/3ds/37.png')" src="img/blank.png" title="Omega Forms - Walls">
+		</div>
+		<br>
+		<div class="text">
+			<button id="ban">Ban all</button> <button id="unban">Unban all</button> &ndash; Code: <input type="text" id="code">
+		</div>
+		<div class="text">
+			Click on a stage to cycle through the options (blank &raquo; starter &raquo; counterpick &raquo; banned). Once you have chosen what you want your ruleset to be, click on generate code to get a series of numbers. Copy the text and paste it in the <a href="index.html">Stage Striker</a>'s code box. All blank and banned stages will be considered banned.
+		</div>
+		<div class="text">
+			<a href="../">Smash Apps</a> - <a href="https://github.com/quetzle/smash-apps">Github page</a>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+		var starters = [];
+		var counterpicks = [];
+		
+		$(document).ready(function() {
+			$("img").click(function () {
+				if ($(this).attr("src") == "img/starter.png") {
+					$(this).attr("src","img/counterpick.png");
+					var index = $("img").index($(this));
+					counterpicks.push(index);
+					if (starters.indexOf(index) > -1) {
+						starters.splice(starters.indexOf(index),1);
+					}
+				} else if ($(this).attr("src") == "img/counterpick.png") {
+					$(this).attr("src","img/strike.png");
+					var index = $("img").index($(this));
+					if (counterpicks.indexOf(index) > -1) {
+						counterpicks.splice(counterpicks.indexOf(index),1);
+					}
+				} else if ($(this).attr("src") == "img/strike.png") {
+					$(this).attr("src","img/blank.png");
+				} else if ($(this).attr("src") == "img/blank.png") {
+					$(this).attr("src","img/starter.png");
+					var index = $("img").index($(this));
+					starters.push(index);
+				}
+				$("#code").val(starters + "|" + counterpicks);
+			});
+			$("#ban").click(function () {
+				$("img").attr("src","img/strike.png");
+				starters = [];
+				counterpicks = [];
+				$("#code").val(starters + "|" + counterpicks);
+			});
+			$("#unban").click(function () {
+				$("img").attr("src","img/blank.png");
+				starters = [];
+				counterpicks = [];
+				$("#code").val(starters + "|" + counterpicks);
+			});
+			$("#code").focus(function () {
+				$(this).select();
+			})
+		});
+	</script>
+</body>
+</html>

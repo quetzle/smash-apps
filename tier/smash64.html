@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="icon" type="image/x-icon" href= "../icon.png"/>
+	<title>Tier List Maker - Smash Apps</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100italic" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<h1>TIER LIST MAKER - SMASH 64</h1>
+	<div class="row">
+		<input type="text" value="S" class="tier1 level">
+		<div class="tier sort"></div>
+	</div>
+	<div class="row">
+		<input type="text" value="A" class="tier2 level">
+		<div class="tier sort"></div>
+	</div>
+	<div class="row">
+		<input type="text" value="B" class="tier3 level">
+		<div class="tier sort"></div>
+	</div>
+	<div class="row">
+		<input type="text" value="C" class="tier4 level">
+		<div class="tier sort"></div>
+	</div>
+	<div class="row">
+		<input type="text" value="D" class="tier5 level">
+		<div class="tier sort"></div>
+	</div>
+	<div class="row">
+		<input type="text" value="E" class="tier6 level">
+		<div class="tier sort"></div>
+	</div>
+	<div class="row last">
+		<input type="text" value="F" class="tier7 level">
+		<div class="tier sort"></div>
+	</div>
+
+	<div class="checkboxes"><input type="checkbox" checked="true">Tier 1 &nbsp; <input type="checkbox" checked="true">Tier 2 &nbsp; <input type="checkbox" checked="true">Tier 3 &nbsp; <input type="checkbox" checked="true">Tier 4 &nbsp; <input type="checkbox" checked="true">Tier 5 &nbsp; <input type="checkbox" checked="true">Tier 6 &nbsp; <input type="checkbox" checked="true">Tier 7 &nbsp; <a href="javascript:void()" id="help" class="hidden">Show help and other games</a></div>
+	<div style="width:774px;display:none;text-align:left;margin:0px auto;" id="helptext">
+		Click and drag on the images to rearrange them across the different tiers. You can edit the name of each tier by clicking on the letter to the left. If you change the name to one of the default letters, the color becomes the color associated with that name. By default, there are 7 tiers, but you can disable them as you wish by clicking on the corresponding checkboxes above. If you disable a tier when characters are still in it, they will be moved to the character box below. Check out the other apps at
+		 <a href="../">Smash Apps</a>: <a href="melee.html">Melee</a>,  <a href="brawl.html">Brawl</a>, <a href="projectm.html">Project M</a>, <a href="index.html">Smash 4</a>,
+	</div>
+	<div id="char4" class="sort" style="padding-top:25px;">
+    <img src="img/64/mario.png"  style="width:96px; height:96px;">
+    <img src="img/64/captainfalcon.png"  style="width:96px; height:96px;">
+    <img src="img/64/donkeykong.png"  style="width:96px; height:96px;">
+    <img src="img/64/fox.png"  style="width:96px; height:96px;">
+    <img src="img/64/jigglypuff.png"  style="width:96px; height:96px;">
+    <img src="img/64/kirby.png"  style="width:96px; height:96px;">
+    <img src="img/64/link.png"  style="width:96px; height:96px;">
+    <img src="img/64/luigi.png"  style="width:96px; height:96px;">
+    <img src="img/64/ness.png"  style="width:96px; height:96px;">
+    <img src="img/64/pikachu.png"  style="width:96px; height:96px;">
+    <img src="img/64/samus.png"  style="width:96px; height:96px;">
+    <img src="img/64/yoshi.png"  style="width:96px; height:96px;">
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("body").disableSelection();
+			$(".tier, #char4").sortable({
+				connectWith: ".sort",
+				placeholder: "placeholder4",
+				revert: 100,
+				helper: "clone"
+			});
+			$("input[type='checkbox']").click(function() {
+				if (!this.checked) {
+					var check = $("input[type='checkbox']").index(this);
+					$(".row:eq(" + check + ")").hide();
+					$("#char4").append($(".row:eq(" + check + ")").find("img"));
+				} else {
+					var check = $("input[type='checkbox']").index(this);
+					$(".row:eq(" + check + ")").show();
+				}
+			});
+			$("#help").click(function () {
+				if ($(this).attr("class") == "hidden") {
+					$("#helptext").show();
+					$("#help").attr("class","showing");
+					$("#help").text("Hide help and other games");
+				} else {
+					$("#helptext").hide();
+					$("#help").attr("class","hidden");
+					$("#help").text("Show help and other games");
+				}
+			});
+			$(".level").change(function () {
+				levelVal = $(this).val();
+				if (levelVal == "S")
+					$(this).attr("class","tier1 level");
+				else if (levelVal == "A")
+					$(this).attr("class","tier2 level");
+				else if (levelVal == "B")
+					$(this).attr("class","tier3 level");
+				else if (levelVal == "C")
+					$(this).attr("class","tier4 level");
+				else if (levelVal == "D")
+					$(this).attr("class","tier5 level");
+				else if (levelVal == "E")
+					$(this).attr("class","tier6 level");
+				else if (levelVal == "F")
+					$(this).attr("class","tier7 level");
+			});
+		});
+	</script>
+</body>
