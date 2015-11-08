@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100italic" rel="stylesheet" type="text/css"> 
+	<link rel="icon" type="image/x-icon" href= "../icon.png"/>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100italic" rel="stylesheet" type="text/css">
 	<link href="style.css" rel="stylesheet">
 	<title>Stage Striking - Smash Bros Wii U</title>
 </head>
@@ -37,7 +38,7 @@
 		</div>
 		<br>
 		<div class="text">
-			Select rules: 
+			Select rules:
 			<select id="presets">
 				<option value="none">None</option>
 				<optgroup label="Singles">
@@ -62,13 +63,13 @@
 			<a href="../index.html">Smash Apps</a> - <a href="https://github.com/quetzle/smash-apps">Github page</a>
 		</div>
 	</div>
-	
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script>
 		var separate = [];
 		var starters = [];
 		var counterpicks = [];
-		
+
 		$(document).ready(function() {
 			$("img").click(function () {
 				if ($(this).attr("src") == "img/strike.png") {
