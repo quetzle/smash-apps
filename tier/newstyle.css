@@ -1,3 +1,10 @@
+html,body{
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+	padding: 0;
+	margin: 0;
+}
+
 body {
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
@@ -12,8 +19,29 @@ h1 {
 	text-align: left;
 }
 
-.last {
-	border-bottom: solid 1px #dedede;
+#tablewrap {
+	padding: 16px;
+	background-color: #1A1A1A;
+}
+
+td {
+	border: solid 3px black;
+	margin: 0;
+	padding: 0;
+	height: 64px;
+}
+
+tr {
+	line-height: 0px;
+}
+
+table {
+	min-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 0;
+	border: solid 3px black;
+	background:url("new/smashballbg.png") no-repeat bottom right;
 }
 
 .labelHolder {
@@ -21,41 +49,19 @@ h1 {
 }
 
 .label {
-	height: 94px;
-	width: 48px;
+	min-width: 56px;
 	text-align: center;
 	border: none;
 	font-weight: 600;
 	margin: 0;
 	display: inline-block;
-	vertical-align: top;
-}
-
-input[type="text"].levelPM {
-	height: 54px;
+	padding: 4px;
 }
 
 .tier {
-	width: 1248px;
-	height: 96px;
-	display: inline-block;
-	white-space: nowrap;
-}
-
-.tierPM {
-	height: 56px;
-}
-
-.placeholder4 {
-	height: 96px;
-	width: 96px;
-	background-color: #dedede;
-}
-
-.placeholderPM {
-	height: 56px;
-	width: 80px;
-	background-color: #dedede;
+	width: 960px;
+	height: 64px;
+	text-align: left;
 }
 
 .checkboxes {
@@ -85,26 +91,15 @@ input[type="text"].levelPM {
 }
 
 #char4 {
-	width: 1248px;
+	width: 768px;
 	margin: 10px auto;
-}
-
-#charM {
-	width: 900px;
-	margin: 10px auto;
-}
-
-#charM img, .melee div div img {
-	width: 96px;
-	height: 96px;
-}
-
-#charPM {
-	width: 756px;
-	margin: 8px auto 10px auto;
 	line-height: 0px;
 }
 
-#charPM img {
-	margin: 2px;
+img {
+	height: 64px;
+}
+
+.character {
+	display:inline-block;
 }
