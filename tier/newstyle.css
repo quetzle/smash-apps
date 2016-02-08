@@ -60,7 +60,7 @@ table {
 
 .tier {
 	width: 960px;
-	height: 64px;
+	min-height: 64px;
 	text-align: left;
 }
 
