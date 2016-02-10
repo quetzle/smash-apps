@@ -53,7 +53,8 @@
 			<td><div class="tier sort" id="rows"></div></td>
 			<td><div id="settings"></div></td>
 		</tr>
-	</table></div>
+	</table>
+	</div>
 	
 	<div id="char4" class="sort">
 		<div></div><div class="character" style="background:url('new/mario.png') center/64px;"></div><div class="character" style="background:url('new/luigi.png') center/64px;"></div><div class="character" style="background:url('new/peach.png') center/64px;"></div><div class="character" style="background:url('new/bowser.png') center/64px;"></div><div class="character" style="background:url('new/yoshi.png') center/64px;"></div><div class="character" style="background:url('new/rosalinaluma.png') center/64px;"></div><div class="character" style="background:url('new/bowserjr.png') center/64px;"></div><div class="character" style="background:url('new/wario.png') center/64px;"></div><div class="character" style="background:url('new/donkeykong.png') center/64px;"></div><div class="character" style="background:url('new/diddykong.png') center/64px;"></div><div class="character" style="background:url('new/mrgamewatch.png') center/64px;"></div><div class="character" style="background:url('new/littlemac.png') center/64px;"></div><div class="character" style="background:url('new/link.png') center/64px;"></div><div class="character" style="background:url('new/zelda.png') center/64px;"></div><div class="character" style="background:url('new/sheik.png') center/64px;"></div><div class="character" style="background:url('new/ganondorf.png') center/64px;"></div><div class="character" style="background:url('new/toonlink.png') center/64px;"></div><div class="character" style="background:url('new/samus.png') center/64px;"></div><div class="character" style="background:url('new/zerosuitsamus.png') center/64px;"></div><div class="character" style="background:url('new/pit.png') center/64px;"></div><div class="character" style="background:url('new/palutena.png') center/64px;"></div><div class="character" style="background:url('new/marth.png') center/64px;"></div><div class="character" style="background:url('new/ike.png') center/64px;"></div><div class="character" style="background:url('new/robin.png') center/64px;"></div><div class="character" style="background:url('new/duckhunt.png') center/64px;"></div><div class="character" style="background:url('new/kirby.png') center/64px;"></div><div class="character" style="background:url('new/kingdedede.png') center/64px;"></div><div class="character" style="background:url('new/metaknight.png') center/64px;"></div><div class="character" style="background:url('new/fox.png') center/64px;"></div><div class="character" style="background:url('new/falco.png') center/64px;"></div><div class="character" style="background:url('new/pikachu.png') center/64px;"></div><div class="character" style="background:url('new/charizard.png') center/64px;"></div><div class="character" style="background:url('new/lucario.png') center/64px;"></div><div class="character" style="background:url('new/jigglypuff.png') center/64px;"></div><div class="character" style="background:url('new/greninja.png') center/64px;"></div><div class="character" style="background:url('new/rob.png') center/64px;"></div><div class="character" style="background:url('new/ness.png') center/64px;"></div><div class="character" style="background:url('new/captainfalcon.png') center/64px;"></div><div class="character" style="background:url('new/villager.png') center/64px;"></div><div class="character" style="background:url('new/olimar.png') center/64px;"></div><div class="character" style="background:url('new/wiifittrainer.png') center/64px;"></div><div class="character" style="background:url('new/shulk.png') center/64px;"></div><div class="character" style="background:url('new/drmario.png') center/64px;"></div><div class="character" style="background:url('new/darkpit.png') center/64px;"></div><div class="character" style="background:url('new/lucina.png') center/64px;"></div><div class="character" style="background:url('new/pacman.png') center/64px;"></div><div class="character" style="background:url('new/megaman.png') center/64px;"></div><div class="character" style="background:url('new/sonic.png') center/64px;"></div><div class="character" style="background:url('new/mewtwo.png') center/64px;"></div><div class="character" style="background:url('new/lucas.png') center/64px;"></div><div class="character" style="background:url('new/roy.png') center/64px;"></div><div class="character" style="background:url('new/ryu.png') center/64px;"></div><div class="character" style="background:url('new/cloud.png') center/64px;"></div><div class="character" style="background:url('new/corrin.png') center/64px;"></div><div class="character" style="background:url('new/bayonetta.png') center/64px;"></div><div class="character" style="background:url('new/miibrawler.png') center/64px;"></div><div class="character" style="background:url('new/miigunner.png') center/64px;"></div><div class="character" style="background:url('new/miisword.png') center/64px;"></div>
@@ -65,7 +66,8 @@
 			<p>Choose label color:</p>
 			<div id="colorselect"><span style="background:#FF7F7F"></span><span style="background:#FFBF7F"></span><span style="background:#FFDF7F"></span><span style="background:#FFFF7F"></span><span style="background:#BFFF7F"></span><span style="background:#7FFF7F"></span><span style="background:#7FFFFF"></span><span style="background:#7FBFFF"></span><span style="background:#7F7FFF"></span><span style="background:#FF7FFF"></span><span style="background:#BF7FBF"></span><span style="background:#3B3B3A"></span><span style="background:#858585"></span><span style="background:#CFCECF"></span><span style="background:#F7F7F7"></span></div>
 			<p>Row functions:</p>
-			<button id="deleteRow">Delete Row</button> <button id="clearRow">Clear Row</button>
+			<p><button id="deleteRow">Delete row</button> <button id="clearRow">Clear row</button></p>
+			<p><button id="addRowUp">Add row above</button> <button id="clearRow">Add row below</button></p>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -139,6 +141,19 @@
 				for(var i = 0; i < currentTier.find("#rows div").length; i++) {
 					$("#char4 div:last-child").after(currentTier.find("#rows div"));
 				}
+			} else if(clicked == "deleteRow") {
+				for(var i = 0; i < currentTier.find("#rows div").length; i++) {
+					$("#char4 div:last-child").after(currentTier.find("#rows div"));
+				}
+				currentTier.remove();
+				updateTiers();
+				$("#overlay").css("opacity", 0);
+				$("#overlay").css("visibility", "hidden");
+			} else if (clicked == "addRowUp") {
+				$("tr:nth-of-type("+($("tr").index(currentTier)+1)+")").before("<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'></div></td><td><div id='settings'></div></td></tr>");
+				updateTiers();
+			} else if (clicked == "reset") {
+				location.reload();
 			}
 		});
 		
