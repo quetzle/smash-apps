@@ -23,6 +23,7 @@ h1 {
 	font-style: italic;
 	font-weight: 100;
 	text-align: left;
+	text-transform: uppercase;
 }
 
 #controls h1 {
@@ -57,7 +58,7 @@ table {
 	margin-right: auto;
 	border-spacing: 0;
 	border: solid 3px black;
-	background:url("new/smashballbg.png") no-repeat bottom right;
+	background:url("img/smashballbg.png") no-repeat bottom right;
 }
 
 .labelHolder {
@@ -67,6 +68,7 @@ table {
 
 .label {
 	min-width: 56px;
+	max-width: 128px;
 	line-height: 16px;
 	text-align: center;
 	border: none;
@@ -93,9 +95,10 @@ td:last-of-type {
 #settings {
 	width: 64px;
 	height: 64px;
-	background: url('new/settings.png') center no-repeat;
+	background: url('img/settings.png') center no-repeat;
 	cursor: pointer;
 	transition: all .3s;
+	display:inline-block;
 }
 
 #settings:hover {
@@ -104,7 +107,30 @@ td:last-of-type {
 	transform: rotate(180deg);
 }
 
-#char4 {
+#moveButtons {
+	width: 64px;
+	height: 64px;
+	display:inline-block;
+}
+div#moveUp {
+	height:32px;
+	width:64px;
+	background: url('img/arrowup.png') center no-repeat;
+	cursor: pointer;
+	transition: all .3s;
+}
+div#moveDown {
+	height:32px;
+	width:64px;
+	background: url('img/arrowdown.png') center no-repeat;
+	cursor: pointer;
+	transition: all .3s;
+}
+#moveButtons div:hover {
+	opacity: .5;
+}
+
+#char {
 	width: 768px;
 	margin: 10px auto;
 	line-height: 0px;
@@ -118,6 +144,8 @@ img {
 	display:inline-block;
 	height: 64px;
 	width: 64px;
+	background-position: center;
+	background-size: 64px;
 }
 
 #overlay {
@@ -134,13 +162,19 @@ img {
 	transition: opacity .3s;
 }
 
-#overlay #modal {
+#overlay #modalWrapper #modal,#gameChange,#helpMenu {
+	position: relative;
+	display:none;
 	width: 728px;
 	margin: 100px auto;
     background-color: #fff;
     padding:20px 20px 40px 20px;
     text-align:center;
 	z-index: 2000;
+}
+
+#helpMenu {
+	text-align: left;
 }
 
 #colorselect {
@@ -161,9 +195,24 @@ img {
 				inset -4px -4px red;
 }
 
+#close {
+	position: absolute;
+	top:0;
+	right:0;
+	width:16px;
+	height:16px;
+	margin:16px;
+	background:url("img/close.png");
+	opacity: .5;
+	transition: opacity .3s;
+}
+#close:hover {
+	opacity:1;
+}
+
 button {
 	background: #fff;
-	box-shadow: 0 2px #dedede;
+	box-shadow: 0 2px #dedede; /* found a way to shoehorn it back in boys */
 	border: solid 1px #dedede;
 	cursor: pointer;
 	outline: none;

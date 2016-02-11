@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="icon" type="image/x-icon" href= "../icon.png"/>
+	<title>Tier List Maker - Smash Apps</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,100italic" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<h1>TIER LIST MAKER - PROJECT M</h1>
+	<div class="row rowPM">
+		<input type="text" value="S" class="tier1 level levelPM">
+		<div class="tier sort tierPM"></div>
+	</div>
+	<div class="row rowPM">
+		<input type="text" value="A" class="tier2 level levelPM">
+		<div class="tier sort tierPM"></div>
+	</div>
+	<div class="row rowPM">
+		<input type="text" value="B" class="tier3 level levelPM">
+		<div class="tier sort tierPM"></div>
+	</div>
+	<div class="row rowPM">
+		<input type="text" value="C" class="tier4 level levelPM">
+		<div class="tier sort tierPM"></div>
+	</div>
+	<div class="row rowPM">
+		<input type="text" value="D" class="tier5 level levelPM">
+		<div class="tier sort tierPM"></div>
+	</div>
+	<div class="row rowPM">
+		<input type="text" value="E" class="tier6 level levelPM">
+		<div class="tier sort tierPM"></div>
+	</div>
+	<div class="row rowPM last">
+		<input type="text" value="F" class="tier7 level levelPM">
+		<div class="tier sort tierPM"></div>
+	</div>
+
+	<div class="checkboxes"><input type="checkbox" checked="true">Tier 1 &nbsp; <input type="checkbox" checked="true">Tier 2 &nbsp; <input type="checkbox" checked="true">Tier 3 &nbsp; <input type="checkbox" checked="true">Tier 4 &nbsp; <input type="checkbox" checked="true">Tier 5 &nbsp; <input type="checkbox" checked="true">Tier 6 &nbsp; <input type="checkbox" checked="true">Tier 7 &nbsp; <a href="javascript:void()" id="help" class="hidden">Show help and other games</a></div>
+	<div style="width:774px;display:none;text-align:left;margin:0px auto;" id="helptext">
+		Click and drag on the images to rearrange them across the different tiers. You can edit the name of each tier by clicking on the letter to the left. If you change the name to one of the default letters, the color becomes the color associated with that name. By default, there are 7 tiers, but you can disable them as you wish by clicking on the corresponding checkboxes above. If you disable a tier when characters are still in it, they will be moved to the character box below. Check out the other apps at
+		<a href="../">Smash Apps</a>: <a href="smash64.html">Smash 64</a>, <a href="melee.html">Melee</a>, <a href="brawl.html">Brawl</a>, <a href="index.html">Smash 4</a>
+	</div>
+	<div id="charPM" class="sort">
+		<img src="img/pm/wario.png"><img src="img/pm/mario.png"><img src="img/pm/luigi.png"><img src="img/pm/peach.png"><img src="img/pm/bowser.png"><img src="img/pm/yoshi.png"><img src="img/pm/donkeykong.png"><img src="img/pm/diddykong.png"><img src="img/pm/falcon.png"><img src="img/pm/wolf.png"><img src="img/pm/fox.png">
+		<img src="img/pm/falco.png"><img src="img/pm/iceclimbers.png"><img src="img/pm/zelda.png"><img src="img/pm/sheik.png"><img src="img/pm/link.png"><img src="img/pm/toonlink.png"><img src="img/pm/ganondorf.png"><img src="img/pm/mewtwo.png"><img src="img/pm/lucario.png"><img src="img/pm/pikachu.png"><img src="img/pm/jigglypuff.png"><img src="img/pm/squirtle.png"><img src="img/pm/ivysaur.png"><img src="img/pm/charizard.png"><img src="img/pm/samus.png"><img src="img/pm/zerosuit.png"><img src="img/pm/lucas.png"><img src="img/pm/ness.png"><img src="img/pm/pit.png"><img src="img/pm/kirby.png"><img src="img/pm/metaknight.png"><img src="img/pm/dedede.png"><img src="img/pm/ike.png"><img src="img/pm/marth.png"><img src="img/pm/roy.png"><img src="img/pm/olimar.png"><img src="img/pm/rob.png"><img src="img/pm/mrgnw.png"><img src="img/pm/snake.png"><img src="img/pm/sonic.png">
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="jquery-ui.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("body").disableSelection();
+			$(".tier, #charPM").sortable({
+				connectWith: ".sort",
+				placeholder: "placeholderPM",
+				revert: 100,
+				helper: "clone"
+			}).disableSelection();
+			$("input[type='checkbox']").click(function() {
+				if (!this.checked) {
+					var check = $("input[type='checkbox']").index(this);
+					$(".row:eq(" + check + ")").hide();
+					$("#charPM").append($(".row:eq(" + check + ")").find("img"));
+				} else {
+					var check = $("input[type='checkbox']").index(this);
+					$(".row:eq(" + check + ")").show();
+				}
+			});
+			$("#help").click(function () {
+				if ($(this).attr("class") == "hidden") {
+					$("#helptext").show();
+					$("#help").attr("class","showing");
+					$("#help").text("Hide help and other games");
+				} else {
+					$("#helptext").hide();
+					$("#help").attr("class","hidden");
+					$("#help").text("Show help and other games");
+				}
+			});
+			$(".level").change(function () {
+				levelVal = $(this).val();
+				if (levelVal == "S")
+					$(this).attr("class","tier1 level levelPM");
+				else if (levelVal == "A")
+					$(this).attr("class","tier2 level levelPM");
+				else if (levelVal == "B")
+					$(this).attr("class","tier3 level levelPM");
+				else if (levelVal == "C")
+					$(this).attr("class","tier4 level levelPM");
+				else if (levelVal == "D")
+					$(this).attr("class","tier5 level levelPM");
+				else if (levelVal == "E")
+					$(this).attr("class","tier6 level levelPM");
+				else if (levelVal == "F")
+					$(this).attr("class","tier7 level levelPM");
+			});
+		});
+	</script>
+</body>

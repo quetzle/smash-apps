@@ -9,10 +9,10 @@
 </head>
 <body>
 	<div id="controls">
-		<h1>TIER LIST MAKER - SMASH 4</h1>
+		<h1>TIER LIST MAKER - <span>PeoplesChamp</span></h1>
 		<div id="buttons">
 			<button id="screenshot">Toggle screenshot mode</button>
-			<button id="reset">Reset to default</button>
+			<button id="game">Change game</button>
 			<button id="help">Help</button>
 		</div>
 	</div>
@@ -21,53 +21,76 @@
 		<tr>
 			<td class="labelHolder" contenteditable="true"><span class="label">S</span></td>
 			<td><div class="tier sort" id="rows"></div></td>
-			<td><div id="settings"></div></td>
+			<td><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
 		</tr>
 		<tr>
 			<td class="labelHolder" contenteditable="true"><span class="label">A</span></td>
 			<td><div class="tier sort" id="rows"></div></td>
-			<td><div id="settings"></div></td>
+			<td><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
 		</tr>
 		<tr>
 			<td class="labelHolder" contenteditable="true"><span class="label">B</span></td>
 			<td><div class="tier sort" id="rows"></div></td>
-			<td><div id="settings"></div></td>
+			<td><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
 		</tr>
 		<tr>
 			<td class="labelHolder" contenteditable="true"><span class="label">C</span></td>
 			<td><div class="tier sort" id="rows"></div></td>
-			<td><div id="settings"></div></td>
+			<td><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
 		</tr>
 		<tr>
 			<td class="labelHolder" contenteditable="true"><span class="label">D</span></td>
 			<td><div class="tier sort" id="rows"></div></td>
-			<td><div id="settings"></div></td>
+			<td><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
 		</tr>
 		<tr>
 			<td class="labelHolder" contenteditable="true"><span class="label">E</span></td>
 			<td><div class="tier sort" id="rows"></div></td>
-			<td><div id="settings"></div></td>
+			<td><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
 		</tr>
 		<tr>
 			<td class="labelHolder" contenteditable="true"><span class="label">F</span></td>
 			<td><div class="tier sort" id="rows"></div></td>
-			<td><div id="settings"></div></td>
+			<td><div id="settings"></div><div id="moveButtons"><div id="moveUp"></div><div id="moveDown"></div></div></td>
 		</tr>
 	</table>
 	</div>
 	
-	<div id="char4" class="sort">
-		<div></div><div class="character" style="background:url('new/mario.png') center/64px;"></div><div class="character" style="background:url('new/luigi.png') center/64px;"></div><div class="character" style="background:url('new/peach.png') center/64px;"></div><div class="character" style="background:url('new/bowser.png') center/64px;"></div><div class="character" style="background:url('new/yoshi.png') center/64px;"></div><div class="character" style="background:url('new/rosalinaluma.png') center/64px;"></div><div class="character" style="background:url('new/bowserjr.png') center/64px;"></div><div class="character" style="background:url('new/wario.png') center/64px;"></div><div class="character" style="background:url('new/donkeykong.png') center/64px;"></div><div class="character" style="background:url('new/diddykong.png') center/64px;"></div><div class="character" style="background:url('new/mrgamewatch.png') center/64px;"></div><div class="character" style="background:url('new/littlemac.png') center/64px;"></div><div class="character" style="background:url('new/link.png') center/64px;"></div><div class="character" style="background:url('new/zelda.png') center/64px;"></div><div class="character" style="background:url('new/sheik.png') center/64px;"></div><div class="character" style="background:url('new/ganondorf.png') center/64px;"></div><div class="character" style="background:url('new/toonlink.png') center/64px;"></div><div class="character" style="background:url('new/samus.png') center/64px;"></div><div class="character" style="background:url('new/zerosuitsamus.png') center/64px;"></div><div class="character" style="background:url('new/pit.png') center/64px;"></div><div class="character" style="background:url('new/palutena.png') center/64px;"></div><div class="character" style="background:url('new/marth.png') center/64px;"></div><div class="character" style="background:url('new/ike.png') center/64px;"></div><div class="character" style="background:url('new/robin.png') center/64px;"></div><div class="character" style="background:url('new/duckhunt.png') center/64px;"></div><div class="character" style="background:url('new/kirby.png') center/64px;"></div><div class="character" style="background:url('new/kingdedede.png') center/64px;"></div><div class="character" style="background:url('new/metaknight.png') center/64px;"></div><div class="character" style="background:url('new/fox.png') center/64px;"></div><div class="character" style="background:url('new/falco.png') center/64px;"></div><div class="character" style="background:url('new/pikachu.png') center/64px;"></div><div class="character" style="background:url('new/charizard.png') center/64px;"></div><div class="character" style="background:url('new/lucario.png') center/64px;"></div><div class="character" style="background:url('new/jigglypuff.png') center/64px;"></div><div class="character" style="background:url('new/greninja.png') center/64px;"></div><div class="character" style="background:url('new/rob.png') center/64px;"></div><div class="character" style="background:url('new/ness.png') center/64px;"></div><div class="character" style="background:url('new/captainfalcon.png') center/64px;"></div><div class="character" style="background:url('new/villager.png') center/64px;"></div><div class="character" style="background:url('new/olimar.png') center/64px;"></div><div class="character" style="background:url('new/wiifittrainer.png') center/64px;"></div><div class="character" style="background:url('new/shulk.png') center/64px;"></div><div class="character" style="background:url('new/drmario.png') center/64px;"></div><div class="character" style="background:url('new/darkpit.png') center/64px;"></div><div class="character" style="background:url('new/lucina.png') center/64px;"></div><div class="character" style="background:url('new/pacman.png') center/64px;"></div><div class="character" style="background:url('new/megaman.png') center/64px;"></div><div class="character" style="background:url('new/sonic.png') center/64px;"></div><div class="character" style="background:url('new/mewtwo.png') center/64px;"></div><div class="character" style="background:url('new/lucas.png') center/64px;"></div><div class="character" style="background:url('new/roy.png') center/64px;"></div><div class="character" style="background:url('new/ryu.png') center/64px;"></div><div class="character" style="background:url('new/cloud.png') center/64px;"></div><div class="character" style="background:url('new/corrin.png') center/64px;"></div><div class="character" style="background:url('new/bayonetta.png') center/64px;"></div><div class="character" style="background:url('new/miibrawler.png') center/64px;"></div><div class="character" style="background:url('new/miigunner.png') center/64px;"></div><div class="character" style="background:url('new/miisword.png') center/64px;"></div>
+	<div id="char" class="sort">
+		<div></div>
 	</div>
 	
 	<div id="overlay">
-		<div id="modal">
-			<h1>SETTINGS</h1>
-			<p>Choose label color:</p>
-			<div id="colorselect"><span style="background:#FF7F7F"></span><span style="background:#FFBF7F"></span><span style="background:#FFDF7F"></span><span style="background:#FFFF7F"></span><span style="background:#BFFF7F"></span><span style="background:#7FFF7F"></span><span style="background:#7FFFFF"></span><span style="background:#7FBFFF"></span><span style="background:#7F7FFF"></span><span style="background:#FF7FFF"></span><span style="background:#BF7FBF"></span><span style="background:#3B3B3A"></span><span style="background:#858585"></span><span style="background:#CFCECF"></span><span style="background:#F7F7F7"></span></div>
-			<p>Row functions:</p>
-			<p><button id="deleteRow">Delete row</button> <button id="clearRow">Clear row</button></p>
-			<p><button id="addRowUp">Add row above</button> <button id="clearRow">Add row below</button></p>
+		<div id="modalWrapper">
+			<div id="modal">
+				<h1>SETTINGS</h1>
+				<span id="close"></span>
+				<p>Choose label color:</p>
+				<div id="colorselect"><span style="background:#FF7F7F"></span><span style="background:#FFBF7F"></span><span style="background:#FFDF7F"></span><span style="background:#FFFF7F"></span><span style="background:#BFFF7F"></span><span style="background:#7FFF7F"></span><span style="background:#7FFFFF"></span><span style="background:#7FBFFF"></span><span style="background:#7F7FFF"></span><span style="background:#FF7FFF"></span><span style="background:#BF7FBF"></span><span style="background:#3B3B3A"></span><span style="background:#858585"></span><span style="background:#CFCECF"></span><span style="background:#F7F7F7"></span></div>
+				<p>Row functions:</p>
+				<p><button id="deleteRow">Delete row</button> <button id="clearRow">Clear row</button></p>
+				<p><button id="addRowUp">Add row above</button> <button id="addRowBelow">Add row below</button></p>
+			</div>
+			<div id="gameChange">
+				<h1>CHANGE GAME</h1>
+				<span id="close"></span>
+				<button id="switch64">Super Smash Bros. 64</button>
+				<button id="switchMelee">Super Smash Bros. Melee</button>
+				<button id="switchBrawl">Super Smash Bros. Brawl</button>
+				<button id="switchPM">Project M</button>
+				<button id="switchSmash4">Super Smash Bros. 4</button>
+				<p><strong>Changing your game is final!</strong> Do not click unless you are sure you want to change!</p>
+			</div>
+			<div id="helpMenu">
+				<h1>HELP</h1>
+				<span id="close"></span>
+				<p>This is the new version of the old Smash Tier List Maker. If you still like the old one, click here to go there.</p>
+				<p><strong>All 4 official Smash games and Project M are supported.</strong> If you want to change the game you are using, click on "Change game" in the top bar.</p>
+				<p><strong>This app does not have a built-in screenshot feature.</strong> If you would like to take a screenshot of your tierlist, click on the "Toggle screenshot mode" button in the top bar to hide the buttons to the right of the tierlist. Then, you can use the print screen key or another program such as Snipping Tool to capture an image of your tierlist.</p>
+				<p>There is a gear next to each tier in the tierlist. (If you don't see this gear, click on the "Toggle screenshot mode" button in the top bar. If this doesn't work, <a href="https://www.reddit.com/message/compose?to=Buizbuiz&subject=Smash%20Tier%20List%20Maker">message /u/Buizbuiz on reddit</a>.) If you click on it, you can <strong>change the color of the tier label, add rows, delete the row, or remove all of the characters currently in the row.</strong></p>
+				<p>Next to the gear are 2 arrows, pointed up and down. Clicking these will let you <strong>move a tier up and down a level</strong>.</p>
+				<p><strong>You can change the name of the tier.</strong> Click on the tier label, you can type in there.</p>
+			</div>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -78,6 +101,13 @@
 				return el.classList.contains('sort');
 			}
 		});
+		
+		// character images
+		var singleChar = "<div class='character'></div>";
+		var gameSmash4 = ["ssb4","mario","luigi","peach","bowser","yoshi","rosalinaluma","bowserjr","wario","donkeykong","diddykong","mrgamewatch","littlemac","link","zelda","sheik","ganondorf","toonlink","samus","zerosuitsamus","pit","palutena","marth","ike","robin","duckhunt","kirby","kingdedede","metaknight","fox","falco","pikachu","charizard","lucario","jigglypuff","greninja","rob","ness","captainfalcon","villager","olimar","wiifittrainer","shulk","drmario","darkpit","lucina","pacman","megaman","sonic","mewtwo","lucas","roy","ryu","cloud","corrin","bayonetta","miibrawler","miigunner","miisword"];
+		var gameMelee = ["melee","drmario","mario","luigi","bowser","peach","yoshi","dk","falcon","ganon","falco","fox","ness","icies","kirby","samus","zelda","sheik","link","ylink","pichu","pikachu","jigglypuff","mewtwo","gnw","marth","roy"];
+		var game64 = ["64","luigi","mario","dk","link","samus","falcon","ness","yoshi","kirby","fox","pikachu","jigglypuff"];
+		var gameBrawl = ["brawl", "mario","luigi","peach","bowser","donkeykong","diddykong","yoshi","wario","link","zelda","sheik","ganondorf","toonlink","samus","pit","iceclimbers","rob","kirby","metaknight","kingdedede","olimar","fox","falco","wolf","captainfalcon","pikachu","pokemontrainer","lucario","jigglypuff","marth","ike","ness","lucas","mrgamewatch","snake","sonic"];
 		
 		var screenshotMode = false;
 		var colors = ["#FF7F7F","#FFBF7F","#FFDF7F","#FFFF7F","#BFFF7F","#7FFF7F","#7FFFFF","#7FBFFF","#7F7FFF","#FF7FFF","#BF7FBF","#3B3B3A","#858585","#CFCECF","#F7F7F7"];
@@ -96,12 +126,13 @@
 		var tierIndex;
 		var currentColor;
 		var colorIndex;
+		var currentGame;
 					  
 		for (var i = 0; i < tierDefaults.length; i++) {
 			tierDefaults[i][0].find(".labelHolder").css("background",colors[tierDefaults[i][1]]);
 		}
 			
-		$(document).on("click touchend", "#settings", function() { // open settings modal
+		$(document).on("click", "#settings", function() { // open settings modal
 			currentTier = $(this).parent().parent();
 			currentColor = currentTier.find(".labelHolder").css("background-color");
 			colorIndex = colors.indexOf(rgb2hex(currentColor).toUpperCase());
@@ -111,11 +142,24 @@
 				$("#modal span:nth-of-type("+(i+1)+")").attr("class","nope");
 			}
 			$("#modal span:nth-of-type("+(colorIndex+1)+")").attr("class","selected");
+			$("#modal").css("display","block");
 			$("#overlay").css("opacity", 1);
 			$("#overlay").css("visibility", "visible");
 		});
 		
-		$(document).on("click touchend", "#colorselect span", function() { // change row label
+		$(document).on("click", "#game", function() { // open game changer modal
+			$("#gameChange").css("display","block");
+			$("#overlay").css("opacity", 1);
+			$("#overlay").css("visibility", "visible");
+		});
+		
+		$(document).on("click", "#help", function() { // open help modal
+			$("#helpMenu").css("display","block");
+			$("#overlay").css("opacity", 1);
+			$("#overlay").css("visibility", "visible");
+		});
+		
+		$(document).on("click", "#colorselect span", function() { // change row label
 			for (var i = 0; i < $("#modal span").length; i++) {
 				$("#modal span:nth-of-type("+(i+1)+")").attr("class","nope");
 			}
@@ -123,12 +167,25 @@
 			currentTier.find(".labelHolder").css("background-color",$(this).css("background-color"));
 			updateTiers();
 		});
+		
+		$(document).on("click", "#gameChange button", function() { // change row label
+			console.log("game switching");
+			switch($(this).attr("id")) {
+				case "switch64": changeGame(game64);break;
+				case "switchMelee": changeGame(gameMelee);break;
+				case "switchBrawl": changeGame(gameBrawl);break;
+				case "switchSmash4": changeGame(gameSmash4);break;
+			}
+		});
 			
-		$(document).on("click touchend", function(e) {
+		$(document).on("click", function(e) {
 			clicked = e.target.id;
-			if(clicked == "overlay") { // close settings modal
+			if(clicked == "overlay" || clicked == "modalWrapper" || clicked == "close") { // close modals
 				$("#overlay").css("opacity", 0);
 				$("#overlay").css("visibility", "hidden");
+				$("#modal").css("display", "none");
+				$("#gameChange").css("display", "none");
+				$("#helpMenu").css("display", "none");
 			} else if(clicked == "screenshot") { // toggle screenshot mode on or off
 				if (screenshotMode) {
 					$("td:last-of-type").css("display","table-cell");
@@ -137,23 +194,32 @@
 					$("td:last-of-type").css("display","none");
 					screenshotMode = true;
 				}
-			} else if(clicked == "clearRow") {
+			} else if(clicked == "clearRow") { // put characters in this row back into the box
 				for(var i = 0; i < currentTier.find("#rows div").length; i++) {
-					$("#char4 div:last-child").after(currentTier.find("#rows div"));
+					$("#char div:last-child").after(currentTier.find("#rows div"));
 				}
-			} else if(clicked == "deleteRow") {
+			} else if(clicked == "deleteRow") { // delete this row
 				for(var i = 0; i < currentTier.find("#rows div").length; i++) {
-					$("#char4 div:last-child").after(currentTier.find("#rows div"));
+					$("#char div:last-child").after(currentTier.find("#rows div"));
 				}
 				currentTier.remove();
 				updateTiers();
 				$("#overlay").css("opacity", 0);
 				$("#overlay").css("visibility", "hidden");
-			} else if (clicked == "addRowUp") {
-				$("tr:nth-of-type("+($("tr").index(currentTier)+1)+")").before("<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'></div></td><td><div id='settings'></div></td></tr>");
+			} else if (clicked == "addRowUp") { // add a row on top of the current row
+				$("tr:nth-of-type("+($("tr").index(currentTier)+1)+")").before("<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>");
 				updateTiers();
-			} else if (clicked == "reset") {
-				location.reload();
+			} else if (clicked == "addRowBelow") { // add a row below the current row
+				$("tr:nth-of-type("+($("tr").index(currentTier)+1)+")").after("<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>");
+				updateTiers();
+			} else if (clicked == "moveUp") { // move the row above the row above it
+				currentTier = $(e.target).closest("tr");
+				if (currentTier.prev("tr").length != 0)
+					currentTier.insertBefore(currentTier.prev("tr"));
+			} else if (clicked == "moveDown") { // move the row below the row below it
+				currentTier = $(e.target).closest("tr");
+				if (currentTier.next("tr").length != 0)
+					currentTier.insertAfter(currentTier.next("tr"));
 			}
 		});
 		
@@ -181,8 +247,24 @@
 			console.log(tierlist);
 		}
 		
+		function changeGame(game) {
+			if (game[0] != currentGame) {
+				currentGame = game[0];
+				$(".character").each( function() {
+					$(this).remove();
+				});
+				for (var i = 1; i < game.length; i++) {
+					$("#char div:last-child").after(singleChar);
+					$("#char div:last-child").css("background-image","url(img/"+currentGame+"/"+game[i]+".png)");
+				}
+				$("h1 span").text(currentGame);
+				updateTiers();
+			}
+		}
+		
 		$(document).ready( function() {
 			updateTiers();
+			changeGame(gameSmash4);
 		});
 	</script>
 </body>
