@@ -196,6 +196,9 @@
 				$("#helpMenu").css("display", "none");
 				$("#screenshotShow").css("display", "none");
 			} else if(clicked == "screenshot") { // take a screenshot
+				$("#modal").css("display", "none");
+				$("#gameChange").css("display", "none");
+				$("#helpMenu").css("display", "none");
 				$("#screenshotShow canvas").remove();
 				$("#screenshotShow").css("display","block");
 				$("#overlay").css("opacity", 1);
@@ -229,6 +232,7 @@
 				updateTiers();
 				$("#overlay").css("opacity", 0);
 				$("#overlay").css("visibility", "hidden");
+				$("#modal").css("display", "none");
 			} else if (clicked == "addRowUp") { // add a row on top of the current row
 				$("tr:nth-of-type("+($("tr").index(currentTier)+1)+")").before("<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>");
 				updateTiers();
