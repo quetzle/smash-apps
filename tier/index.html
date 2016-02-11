@@ -68,6 +68,7 @@
 				<span id="close"></span>
 				<p>Choose label color:</p>
 				<div id="colorselect"><span style="background:#FF7F7F"></span><span style="background:#FFBF7F"></span><span style="background:#FFDF7F"></span><span style="background:#FFFF7F"></span><span style="background:#BFFF7F"></span><span style="background:#7FFF7F"></span><span style="background:#7FFFFF"></span><span style="background:#7FBFFF"></span><span style="background:#7F7FFF"></span><span style="background:#FF7FFF"></span><span style="background:#BF7FBF"></span><span style="background:#3B3B3A"></span><span style="background:#858585"></span><span style="background:#CFCECF"></span><span style="background:#F7F7F7"></span></div>
+				<p>Label name:</p><textarea></textarea>
 				<p>Row functions:</p>
 				<p><button id="deleteRow">Delete row</button> <button id="clearRow">Clear row</button></p>
 				<p><button id="addRowUp">Add row above</button> <button id="addRowBelow">Add row below</button></p>
@@ -80,7 +81,7 @@
 				<button id="switchBrawl">Super Smash Bros. Brawl</button>
 				<button id="switchPM">Project M</button>
 				<button id="switchSmash4">Super Smash Bros. 4</button>
-				<p><strong>Changing your game is final!</strong> Do not click unless you are sure you want to change!</p>
+				<p><strong>Changing your game will empty your tierlist!</strong> Do not click unless you are sure you want to change! You cannot undo this.</p>
 			</div>
 			<div id="helpMenu">
 				<h1>HELP</h1>
@@ -90,7 +91,7 @@
 				<p><strong>You can take screenshots of your tierlist.</strong> To take a screenshot, click on the "Screenshot" button in the top bar. A popup should appear that contains an image of your tierlist. You can copy or save this image to then upload to an image hosting site. If the screenshot feature does not work for you, you can click the "Hide controls" button to make the list look cleaner.</p>
 				<p>There is a gear next to each tier in the tierlist. (If you don't see this gear, click on the "Toggle screenshot mode" button in the top bar. If this doesn't work, <a href="https://www.reddit.com/message/compose?to=Buizbuiz&subject=Smash%20Tier%20List%20Maker">message /u/Buizbuiz on reddit</a>.) If you click on it, you can <strong>change the color of the tier label, add rows, delete the row, or remove all of the characters currently in the row.</strong></p>
 				<p>Next to the gear are 2 arrows, pointed up and down. Clicking these will let you <strong>move a tier up and down a level</strong>.</p>
-				<p><strong>You can change the name of the tier.</strong> Click on the tier label, you can type in there.</p>
+				<p><strong>You can change the name of the tier.</strong> Click on the tier label, you can type in there. If this doesn't work, you can change it in the textbox in the corresponding settings menu.</p>
 				<p>If you want to <strong>completely start over</strong>, just refresh the page.</a>
 			</div>
 			<div id="screenshotShow"><span></span><p>Your image should appear above. You can copy or save this image. Try uploading it to an image hosting website such as <a href="http://imgur.com">Imgur</a>.</p></div>
@@ -111,7 +112,8 @@
 		var gameSmash4 = ["ssb4","mario","luigi","peach","bowser","yoshi","rosalinaluma","bowserjr","wario","donkeykong","diddykong","mrgamewatch","littlemac","link","zelda","sheik","ganondorf","toonlink","samus","zerosuitsamus","pit","palutena","marth","ike","robin","duckhunt","kirby","kingdedede","metaknight","fox","falco","pikachu","charizard","lucario","jigglypuff","greninja","rob","ness","captainfalcon","villager","olimar","wiifittrainer","shulk","drmario","darkpit","lucina","pacman","megaman","sonic","mewtwo","lucas","roy","ryu","cloud","corrin","bayonetta","miibrawler","miigunner","miisword"];
 		var gameMelee = ["melee","drmario","mario","luigi","bowser","peach","yoshi","dk","falcon","ganon","falco","fox","ness","icies","kirby","samus","zelda","sheik","link","ylink","pichu","pikachu","jigglypuff","mewtwo","gnw","marth","roy"];
 		var game64 = ["64","luigi","mario","dk","link","samus","falcon","ness","yoshi","kirby","fox","pikachu","jigglypuff"];
-		var gameBrawl = ["brawl", "mario","luigi","peach","bowser","donkeykong","diddykong","yoshi","wario","link","zelda","sheik","ganondorf","toonlink","samus","pit","iceclimbers","rob","kirby","metaknight","kingdedede","olimar","fox","falco","wolf","captainfalcon","pikachu","pokemontrainer","lucario","jigglypuff","marth","ike","ness","lucas","mrgamewatch","snake","sonic"];
+		var gameBrawl = ["brawl","mario","luigi","peach","bowser","donkeykong","diddykong","yoshi","wario","link","zelda","sheik","ganondorf","toonlink","samus","zerosuitsamus","pit","iceclimbers","rob","kirby","metaknight","kingdedede","olimar","fox","falco","wolf","captainfalcon","pikachu","pokemontrainer","lucario","jigglypuff","marth","ike","ness","lucas","mrgamewatch","snake","sonic"];
+		var gamePM = ["pm","wario","mario","luigi","peach","bowser","yoshi","donkeykong","diddykong","falcon","wolf","fox","falco","icies","zelda","sheik","link","toonlink","ganon","mewtwo","lucario","pikachu","jigglypuff","squirtle","ivysaur","charizard","samus","zerosuit","lucas","ness","pit","kirby","metaknight","dedede","ike","marth","roy","olimar","rob","gnw","snake","sonic"];
 		
 		var screenshotMode = false;
 		var colors = ["#FF7F7F","#FFBF7F","#FFDF7F","#FFFF7F","#BFFF7F","#7FFF7F","#7FFFFF","#7FBFFF","#7F7FFF","#FF7FFF","#BF7FBF","#3B3B3A","#858585","#CFCECF","#F7F7F7"];
@@ -139,6 +141,7 @@
 		$(document).on("click", "#settings", function() { // open settings modal
 			currentTier = $(this).parent().parent();
 			currentColor = currentTier.find(".labelHolder").css("background-color");
+			$("textarea").val(currentTier.find(".labelHolder").text());
 			colorIndex = colors.indexOf(rgb2hex(currentColor).toUpperCase());
 			tier = [currentTier, colorIndex];
 			console.log(tier);
@@ -172,12 +175,13 @@
 			updateTiers();
 		});
 		
-		$(document).on("click", "#gameChange button", function() { // change row label
+		$(document).on("click", "#gameChange button", function() { // change game
 			console.log("game switching");
 			switch($(this).attr("id")) {
 				case "switch64": changeGame(game64);break;
 				case "switchMelee": changeGame(gameMelee);break;
 				case "switchBrawl": changeGame(gameBrawl);break;
+				case "switchPM": changeGame(gamePM);break;
 				case "switchSmash4": changeGame(gameSmash4);break;
 			}
 		});
@@ -240,6 +244,10 @@
 				if (currentTier.next("tr").length != 0)
 					currentTier.insertAfter(currentTier.next("tr"));
 			}
+		});
+		
+		$("textarea").bind("input propertychange", function() {
+			currentTier.find(".label").html($("textarea").val().replace(/\n/g, "<br>"));
 		});
 		
 		// http://stackoverflow.com/a/3971432 thanks Zack Katz :D
