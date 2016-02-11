@@ -11,7 +11,8 @@
 	<div id="controls">
 		<h1>TIER LIST MAKER - <span>PeoplesChamp</span></h1>
 		<div id="buttons">
-			<button id="screenshot">Toggle screenshot mode</button>
+			<button id="screenshot">Screenshot</button>
+			<button id="hidebuttons">Hide controls</button>
 			<button id="game">Change game</button>
 			<button id="help">Help</button>
 		</div>
@@ -86,15 +87,18 @@
 				<span id="close"></span>
 				<p>This is the new version of the old Smash Tier List Maker. If you still like the old one, <a href="old/">click here</a> to go there.</p>
 				<p><strong>All 4 official Smash games and Project M are supported.</strong> If you want to change the game you are using, click on "Change game" in the top bar.</p>
-				<p><strong>This app does not have a built-in screenshot feature.</strong> If you would like to take a screenshot of your tierlist, click on the "Toggle screenshot mode" button in the top bar to hide the buttons to the right of the tierlist. Then, you can use the print screen key or another program such as Snipping Tool to capture an image of your tierlist.</p>
+				<p><strong>You can take screenshots of your tierlist.</strong> To take a screenshot, click on the "Screenshot" button in the top bar. A popup should appear that contains an image of your tierlist. You can copy or save this image to then upload to an image hosting site. If the screenshot feature does not work for you, you can click the "Hide controls" button to make the list look cleaner.</p>
 				<p>There is a gear next to each tier in the tierlist. (If you don't see this gear, click on the "Toggle screenshot mode" button in the top bar. If this doesn't work, <a href="https://www.reddit.com/message/compose?to=Buizbuiz&subject=Smash%20Tier%20List%20Maker">message /u/Buizbuiz on reddit</a>.) If you click on it, you can <strong>change the color of the tier label, add rows, delete the row, or remove all of the characters currently in the row.</strong></p>
 				<p>Next to the gear are 2 arrows, pointed up and down. Clicking these will let you <strong>move a tier up and down a level</strong>.</p>
 				<p><strong>You can change the name of the tier.</strong> Click on the tier label, you can type in there.</p>
+				<p>If you want to <strong>completely start over</strong>, just refresh the page.</a>
 			</div>
+			<div id="screenshotShow"><span></span><p>Your image should appear above. You can copy or save this image. Try uploading it to an image hosting website such as <a href="http://imgur.com">Imgur</a>.</p></div>
 		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="dragula.min.js"></script>
+	<script src="html2canvas.js"></script>
 	<script>
 		dragula({
 			isContainer: function (el) {
@@ -186,12 +190,26 @@
 				$("#modal").css("display", "none");
 				$("#gameChange").css("display", "none");
 				$("#helpMenu").css("display", "none");
-			} else if(clicked == "screenshot") { // toggle screenshot mode on or off
+			} else if(clicked == "screenshot") { // take a screenshot
+				$("#screenshotShow canvas").remove();
+				$("#screenshotShow").css("display","block");
+				$("#overlay").css("opacity", 1);
+				$("#overlay").css("visibility", "visible");
+				$("td:last-of-type").css("display","none");
+				html2canvas($("table"), {
+				  onrendered: function(canvas) {
+					$("#screenshotShow span").after(canvas);
+					$("td:last-of-type").css("display","table-cell");
+				  }
+				});
+			} else if(clicked == "hidebuttons") { // hide the buttons
 				if (screenshotMode) {
 					$("td:last-of-type").css("display","table-cell");
+					$("#hidebuttons").text("Hide controls");
 					screenshotMode = false;
 				} else {
 					$("td:last-of-type").css("display","none");
+					$("#hidebuttons").text("Show controls");
 					screenshotMode = true;
 				}
 			} else if(clicked == "clearRow") { // put characters in this row back into the box

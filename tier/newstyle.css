@@ -58,12 +58,13 @@ table {
 	margin-right: auto;
 	border-spacing: 0;
 	border: solid 3px black;
-	background:url("img/smashballbg.png") no-repeat bottom right;
+	background:#1A1A1A url("img/smashballbg.png") no-repeat bottom right;
 }
 
 .labelHolder {
 	min-width: 48px;
 	height: 64px;
+	transition: background .3s;
 }
 
 .label {
@@ -162,15 +163,18 @@ img {
 	transition: opacity .3s;
 }
 
-#overlay #modalWrapper #modal,#gameChange,#helpMenu {
+#overlay #modalWrapper #modal,#gameChange,#helpMenu,#screenshotShow {
 	position: relative;
 	display:none;
 	width: 728px;
 	margin: 100px auto;
     background-color: #fff;
-    padding:20px 20px 40px 20px;
+    padding:20px;
     text-align:center;
 	z-index: 2000;
+}
+#screenshotShow canvas {
+	width: 95%;
 }
 
 #helpMenu {
@@ -188,6 +192,7 @@ img {
 	height: 40px;
 	margin: 0;
 	display: inline-block;
+	transition: box-shadow .1s;
 }
 
 #colorselect span.selected {
@@ -223,4 +228,8 @@ button {
 button:active {
 	box-shadow: 0 1px #dedede;
 	top: 1px;
+}
+
+@media (max-width: 1280px) {
+	.tier{width:640px;}
 }
