@@ -3,6 +3,7 @@ html,body{
     -webkit-touch-callout: none;
 	padding: 0;
 	margin: 0;
+	width:100%;
 }
 
 body {
@@ -37,8 +38,10 @@ h1 {
 }
 
 #tablewrap {
-	padding: 30px;
+	padding: 30px 0;
 	background-color: #1A1A1A;
+	width: 100%;
+	display:block;
 }
 
 td {
@@ -152,11 +155,11 @@ img {
 #overlay {
 	opacity:0;
 	visibility: hidden;
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     width:100%;
-    height:100%;
+    height:100% !important;
     text-align:center;
     z-index: 1000;
 	background-color:rgba(0,0,0,.5);
@@ -167,7 +170,7 @@ img {
 	position: relative;
 	display:none;
 	width: 728px;
-	margin: 100px auto;
+	margin: 0 auto;
     background-color: #fff;
     padding:20px;
     text-align:center;
@@ -232,6 +235,11 @@ button:active {
 	top: 1px;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1280px) and (max-device-width: 1280px) {
 	.tier{width:640px;}
+	table{min-width:0px;}
+}
+
+@media handheld {
+	body{width: 800px;}
 }

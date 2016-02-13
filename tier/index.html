@@ -89,14 +89,16 @@
 				<p>This is the new version of the old Smash Tier List Maker. If you still like the old one, <a href="old/">click here</a> to go there.</p>
 				<p><strong>All 4 official Smash games and Project M are supported.</strong> If you want to change the game you are using, click on "Change game" in the top bar.</p>
 				<p><strong>You can take screenshots of your tierlist.</strong> To take a screenshot, click on the "Share" button in the top bar. A popup should appear that contains an image of your tierlist. You can copy or save this image to then upload to an image hosting site. If the screenshot feature does not work for you, you can click the "Hide controls" button to make the list look cleaner.</p>
-				<p>You can share editable versions of your tierlist.</p> Click on the "Share" button and you will see a textbox that contains a code. Copy and share this with others so that they can edit your tierlist.</p>
+				<p><strong>You can share editable versions of your tierlist.</strong> Click on the "Share" button and you will see a textbox that contains a code. Copy and share this with others so that they can edit your tierlist.</p>
+				<p><strong>Your latest tierlist autosaves to your device.</strong> As soon as you drag a character image, your tierlist will be saved. Any time you reopen it you will be able to access your previous tierlist.</p>
 				<p>There is a gear next to each tier in the tierlist. (If you don't see this gear, click on the "Toggle screenshot mode" button in the top bar. If this doesn't work, <a href="https://www.reddit.com/message/compose?to=Buizbuiz&subject=Smash%20Tier%20List%20Maker">message /u/Buizbuiz on reddit</a>.) If you click on it, you can <strong>change the color of the tier label, add rows, delete the row, or remove all of the characters currently in the row.</strong></p>
 				<p>Next to the gear are 2 arrows, pointed up and down. Clicking these will let you <strong>move a tier up and down a level</strong>.</p>
 				<p><strong>You can change the name of the tier.</strong> Click on the tier label, you can type in there. If this doesn't work, you can change it in the textbox in the corresponding settings menu.</p>
 				<p>If you want to <strong>completely start over</strong>, just refresh the page.</a>
 			</div>
 			<div id="screenshotShow">
-			<span></span><p>Your image should appear above. You can copy or save this image. Try uploading it to an image hosting website such as <a href="http://imgur.com">Imgur</a>. Alternatively, copy the code below to share an editable version of your tierlist. Just paste a code into the box below and click "Run code" to access it.</p>
+				<span id="close"></span>
+				<p>Your image should appear above. You can copy or save this image. Try uploading it to an image hosting website such as <a href="http://imgur.com">Imgur</a>. Alternatively, copy the code below to share an editable version of your tierlist. Just paste a code into the box below and click "Run code" to access it.</p>
 			<textarea id="exportcode" cols="30" rows="8"></textarea><div><button id="runCode">Run code</button></div>
 		</div>
 	</div>
@@ -161,18 +163,21 @@
 			$("#modal").css("display","block");
 			$("#overlay").css("opacity", 1);
 			$("#overlay").css("visibility", "visible");
+			$("#modal").css("top",alignPopup($("#modal")));
 		});
 		
 		$(document).on("click", "#game", function() { // open game changer modal
 			$("#gameChange").css("display","block");
 			$("#overlay").css("opacity", 1);
 			$("#overlay").css("visibility", "visible");
+			$("#gameChange").css("top",alignPopup($("#gameChange")));
 		});
 		
 		$(document).on("click", "#help", function() { // open help modal
 			$("#helpMenu").css("display","block");
 			$("#overlay").css("opacity", 1);
 			$("#overlay").css("visibility", "visible");
+			$("#helpMenu").css("top",alignPopup($("#helpMenu")));
 		});
 		
 		$(document).on("click", "#colorselect span", function() { // change row label
@@ -218,6 +223,7 @@
 				  onrendered: function(canvas) {
 					$("#screenshotShow span").after(canvas);
 					$("td:last-of-type").css("display","table-cell");
+					$("#screenshotShow").css("top",alignPopup($("#screenshotShow")));
 				  }
 				});
 			} else if(clicked == "hidebuttons") { // hide the buttons
@@ -368,6 +374,17 @@
 			}
 		}
 		
+		function tierlistSize() {
+			if ($("table").width > $("#tablewrap").width)
+				$("#tablewrap").css("display","table-cell");
+			else
+				$("#tablewrap").css("display","block");
+		}
+		
+		function alignPopup(popup) {
+			return Math.floor(($(window).height() - popup.height())/2)+"px";
+		}
+		
 		$(document).ready( function() {
 			$("#char").html("<div></div>");
 			if (localStorage.getItem("TierListMakerCode") === null)
@@ -377,6 +394,10 @@
 				loadCode(localStorage.getItem("TierListMakerCode"));
 			}
 			updateTiers();
+			tierlistSize();
 		});
+		$(window).resize( function () {
+			tierlistSize();
+		})
 	</script>
 </body>
