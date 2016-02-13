@@ -85,6 +85,10 @@ table {
 	text-align: left;
 }
 
+.tier div {
+	display:inline-block;
+}
+
 .checkboxes {
 	margin: 10px 0;
 }
