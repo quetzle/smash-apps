@@ -85,12 +85,8 @@ table {
 	text-align: left;
 }
 
-.tier div {
-	display:inline-block;
-}
-
-.checkboxes {
-	margin: 10px 0;
+.hiddenkid {
+	display:none;
 }
 
 td:last-of-type {
@@ -197,6 +193,7 @@ img {
 	margin: 0;
 	display: inline-block;
 	transition: box-shadow .1s;
+	cursor: pointer;
 }
 
 #colorselect span.selected {
@@ -214,6 +211,7 @@ img {
 	background:url("img/close.png");
 	opacity: .5;
 	transition: opacity .3s;
+	cursor: pointer;
 }
 #close:hover {
 	opacity:1;

@@ -108,6 +108,8 @@
 			isContainer: function (el) {
 				return el.classList.contains('sort');
 			}
+		}).on("drop", function() {
+			localStorage.setItem("TierListMakerCode",toCode());
 		});
 		
 		// character images
@@ -118,7 +120,7 @@
 		var gameBrawl = ["brawl","mario","luigi","peach","bowser","donkeykong","diddykong","yoshi","wario","link","zelda","sheik","ganondorf","toonlink","samus","zerosuitsamus","pit","iceclimbers","rob","kirby","metaknight","kingdedede","olimar","fox","falco","wolf","captainfalcon","pikachu","pokemontrainer","lucario","jigglypuff","marth","ike","ness","lucas","mrgamewatch","snake","sonic"];
 		var gamePM = ["pm","wario","mario","luigi","peach","bowser","yoshi","donkeykong","diddykong","falcon","wolf","fox","falco","icies","zelda","sheik","link","toonlink","ganon","mewtwo","lucario","pikachu","jigglypuff","squirtle","ivysaur","charizard","samus","zerosuit","lucas","ness","pit","kirby","metaknight","dedede","ike","marth","roy","olimar","rob","gnw","snake","sonic"];
 		
-		var singleTier = "<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'><div></div></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>";
+		var singleTier = "<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'><div class='hiddenkid'></div></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>";
 		
 		var screenshotMode = false;
 		var colors = ["#FF7F7F","#FFBF7F","#FFDF7F","#FFFF7F","#BFFF7F","#7FFF7F","#7FFFFF","#7FBFFF","#7F7FFF","#FF7FFF","#BF7FBF","#3B3B3A","#858585","#CFCFCF","#F7F7F7"];
@@ -204,6 +206,7 @@
 				$("#screenshotShow").css("display", "none");
 			} else if(clicked == "screenshot") { // take a screenshot
 				$("#exportcode").val(toCode());
+				localStorage.setItem("TierListMakerCode",$("#exportcode").val());
 				$("#modal").css("display", "none");
 				$("#gameChange").css("display", "none");
 				$("#helpMenu").css("display", "none");
@@ -368,8 +371,13 @@
 		
 		$(document).ready( function() {
 			$("#char").html("<div></div>");
+			if (localStorage.getItem("TierListMakerCode") === null)
+				changeGame(gameSmash4);
+			else {
+				$("#exportcode").val(localStorage.getItem("TierListMakerCode"));
+				loadCode(localStorage.getItem("TierListMakerCode"));
+			}
 			updateTiers();
-			changeGame(gameSmash4);
 		});
 	</script>
 </body>
