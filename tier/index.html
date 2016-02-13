@@ -288,7 +288,8 @@
 		}
 		
 		function changeGame(game) {
-			currentGameChars=game;
+			currentGameChars = [];
+			currentGameChars = game;
 			currentGame = game[0];
 			$(".character").each( function() {
 				$(this).remove();
@@ -344,7 +345,7 @@
 				$(this).remove();
 			});
 			console.log(processedCode);
-			switch(processedCode[0]) {
+			switch(processedCode[0][0]) {
 				case "64": changeGame(game64);break;
 				case "melee": changeGame(gameMelee);break;
 				case "brawl": changeGame(gameBrawl);break;
