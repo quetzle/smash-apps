@@ -15,6 +15,7 @@
 			<button id="hidebuttons">Hide controls</button>
 			<button id="game">Change game</button>
 			<button id="help">Help</button>
+			<button id="reset">Reset</button>
 		</div>
 	</div>
 	
@@ -142,7 +143,7 @@
 		var currentColor;
 		var colorIndex;
 		var currentGame;
-		var currentGameChars;
+		var currentGameChars = gameSmash4;
 		var characters;
 					  
 		for (var i = 0; i < tierDefaults.length; i++) {
@@ -265,6 +266,15 @@
 					currentTier.insertAfter(currentTier.next("tr"));
 			} else if (clicked == "runCode") {
 				loadCode($("#exportcode").val());
+			} else if (clicked == "reset") {
+				switch(currentGameChars[0]) {
+					case "64": changeGame(game64);break;
+					case "melee": changeGame(gameMelee);break;
+					case "brawl": changeGame(gameBrawl);break;
+					case "pm": changeGame(gamePM);break;
+					case "ssb4": changeGame(gameSmash4);break;
+				}
+				loadCode(currentGameChars[0]+"==S|0==A|1==B|3==C|5==D|7==E|8==F|9");
 			}
 		});
 		
