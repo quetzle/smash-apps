@@ -69,7 +69,7 @@
 				<span id="close"></span>
 				<p>Choose label color:</p>
 				<div id="colorselect"><span style="background:#FF7F7F"></span><span style="background:#FFBF7F"></span><span style="background:#FFDF7F"></span><span style="background:#FFFF7F"></span><span style="background:#BFFF7F"></span><span style="background:#7FFF7F"></span><span style="background:#7FFFFF"></span><span style="background:#7FBFFF"></span><span style="background:#7F7FFF"></span><span style="background:#FF7FFF"></span><span style="background:#BF7FBF"></span><span style="background:#3B3B3B"></span><span style="background:#858585"></span><span style="background:#CFCFCF"></span><span style="background:#F7F7F7"></span></div>
-				<p>Label name:</p><textarea class=".labelName"></textarea>
+				<p>Label name:</p><textarea id="labelName"></textarea>
 				<p>Row functions:</p>
 				<p><button id="deleteRow">Delete row</button> <button id="clearRow">Clear row</button></p>
 				<p><button id="addRowUp">Add row above</button> <button id="addRowBelow">Add row below</button></p>
@@ -278,8 +278,8 @@
 			}
 		});
 		
-		$(".labelName").bind("input propertychange", function() {
-			currentTier.find(".label").html($("textarea").val().replace(/\n/g, "<br>"));
+		$("#labelName").bind("input propertychange", function() {
+			currentTier.find(".label").html($("#labelName").val().replace(/\n/g, "<br>"));
 		});
 		
 		// http://stackoverflow.com/a/3971432 thanks Zack Katz :D
