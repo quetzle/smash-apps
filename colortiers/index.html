@@ -100,7 +100,6 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="dragula.min.js"></script>
-	<script src="html2canvas.js"></script>
 	<script>
 		dragula({
 			isContainer: function (el) {
@@ -210,12 +209,12 @@
 		});
 		
 		$(document).on("click", ".characterCheck", function() { // add/remove character
-			characterId = $(this).attr("id");
+			characterId = parseInt($(this).attr("id"));
 			if($(this).is(":checked")) {
 				for (var k = 0; k <= currentGameChars[characterId][1]; k++) {
 					$("#char div:last-child").after(singleChar);
 					$("#char div:last-child").css("background-image","url(img/"+currentGame+"/"+currentGameChars[characterId][0]+k+".png)");
-					$("#char div:last-child").attr("id",i);
+					$("#char div:last-child").attr("id",characterId);
 				}
 			} else {
 				$(".character[id="+characterId+"]").each( function() {
