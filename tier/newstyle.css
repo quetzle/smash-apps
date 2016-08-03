@@ -180,6 +180,10 @@ img {
 	width: 95%;
 }
 
+#switchButtons {
+	line-height:2em;
+}
+
 #helpMenu {
 	text-align: left;
 }
