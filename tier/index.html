@@ -81,13 +81,15 @@
 					<button id="switch64">Super Smash Bros. 64</button>
 					<button id="switchMelee">Super Smash Bros. Melee</button>
 					<button id="switchBrawl">Super Smash Bros. Brawl</button>
-					<button id="switchSmash4">Super Smash Bros. 4</button><br>
+					<button id="switchSmash4">Super Smash Bros. 4 (Screenshots)</button>
+					<button id="switchSSB4Renders">Super Smash Bros. 4 (Renders)</button><br>
 					<button id="switchPM">Project M</button>
 					<button id="switchSSF2">Super Smash Flash 2</button><br>
 					<button id="switchSFV">Street Fighter V</button>
 					<button id="switchGGREV">Guilty Gear Xrd -Revelator-</button>
 				</div>
 				<p><strong>Changing your game will empty your tierlist!</strong> Do not click unless you are sure you want to change! You cannot undo this.</p>
+				<p>64, Melee, Brawl, and Smash 4 screenshot icons from <a href="http://ssbwiki.com">SmashWiki</a>. Smash 4 render icons made by /u/wafflepotamus. Project M screenshot icons made by /u/brewster_the_pigeon. Smash Flash 2 screenshot icons made by /u/AxeEnding999. Street Fighter V and Guilty Gear screenshot icons made by <a href="https://github.com/commanderpepper">commanderpepper</a>. </p>
 			</div>
 			<div id="helpMenu">
 				<h1>HELP</h1>
@@ -123,6 +125,7 @@
 		// character images
 		var singleChar = "<div class='character'></div>";
 		var gameSmash4 = ["ssb4","mario","luigi","peach","bowser","yoshi","rosalinaluma","bowserjr","wario","donkeykong","diddykong","mrgamewatch","littlemac","link","zelda","sheik","ganondorf","toonlink","samus","zerosuitsamus","pit","palutena","marth","ike","robin","duckhunt","kirby","kingdedede","metaknight","fox","falco","pikachu","charizard","lucario","jigglypuff","greninja","rob","ness","captainfalcon","villager","olimar","wiifittrainer","shulk","drmario","darkpit","lucina","pacman","megaman","sonic","mewtwo","lucas","roy","ryu","cloud","corrin","bayonetta","miibrawler","miigunner","miisword"];
+		var gameSSB4Renders = ["ssb4r","mario","luigi","peach","bowser","yoshi","rosalinaluma","bowserjr","wario","donkeykong","diddykong","mrgamewatch","littlemac","link","zelda","sheik","ganondorf","toonlink","samus","zerosuitsamus","pit","palutena","marth","ike","robin","duckhunt","kirby","kingdedede","metaknight","fox","falco","pikachu","charizard","lucario","jigglypuff","greninja","rob","ness","captainfalcon","villager","olimar","wiifittrainer","shulk","drmario","darkpit","lucina","pacman","megaman","sonic","mewtwo","lucas","roy","ryu","cloud","corrin","bayonetta","miibrawler","miigunner","miisword"];
 		var gameMelee = ["melee","drmario","mario","luigi","bowser","peach","yoshi","dk","falcon","ganon","falco","fox","ness","icies","kirby","samus","zelda","sheik","link","ylink","pichu","pikachu","jigglypuff","mewtwo","gnw","marth","roy"];
 		var game64 = ["64","luigi","mario","dk","link","samus","falcon","ness","yoshi","kirby","fox","pikachu","jigglypuff"];
 		var gameBrawl = ["brawl","mario","luigi","peach","bowser","donkeykong","diddykong","yoshi","wario","link","zelda","sheik","ganondorf","toonlink","samus","zerosuitsamus","pit","iceclimbers","rob","kirby","metaknight","kingdedede","olimar","fox","falco","wolf","captainfalcon","pikachu","pokemontrainer","lucario","jigglypuff","marth","ike","ness","lucas","mrgamewatch","snake","sonic"];
@@ -153,6 +156,7 @@
 		var currentGame;
 		var currentGameChars = gameSmash4;
 		var characters;
+		var resized,tableWidth;
 					  
 		for (var i = 0; i < tierDefaults.length; i++) {
 			tierDefaults[i][0].find(".labelHolder").css("background",colors[tierDefaults[i][1]]);
@@ -206,6 +210,7 @@
 				case "switchBrawl": changeGame(gameBrawl);break;
 				case "switchPM": changeGame(gamePM);break;
 				case "switchSmash4": changeGame(gameSmash4);break;
+				case "switchSSB4Renders": changeGame(gameSSB4Renders);break;
 				case "switchSFV": changeGame(gameSFV);break;
 				case "switchGGREV": changeGame(gameGGREV);break;
 				case "switchSSF2": changeGame(gameSSF2);break;
@@ -384,6 +389,7 @@
 				case "brawl": changeGame(gameBrawl);break;
 				case "pm": changeGame(gamePM);break;
 				case "ssb4": changeGame(gameSmash4);break;
+				case "ssb4r": changeGame(gameSSB4Renders);break;
 				case "sfv": changeGame(gameSFV);break;
 				case "ggrev": changeGame(gameGGREV);break;
 				case "ssf2": changeGame(gameSSF2);break;

@@ -61,7 +61,7 @@ table {
 	margin-right: auto;
 	border-spacing: 0;
 	border: solid 3px black;
-	background:#1A1A1A url("img/smashballbg.png") no-repeat bottom right;
+	/*background:#1A1A1A url("img/smashballbg.png") no-repeat bottom right;*/
 }
 
 .labelHolder {
