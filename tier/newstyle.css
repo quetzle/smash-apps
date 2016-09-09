@@ -149,7 +149,7 @@ img {
 	height: 64px;
 	width: 64px;
 	background-position: center;
-	background-size: 64px;
+	background-size: cover;
 }
 
 #overlay {
