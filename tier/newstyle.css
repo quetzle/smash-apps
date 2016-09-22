@@ -61,7 +61,7 @@ table {
 	margin-right: auto;
 	border-spacing: 0;
 	border: solid 3px black;
-	background:#1A1A1A url("img/smashballbg.png") no-repeat bottom right;
+	background:#1A1A1A;
 }
 
 .labelHolder {
@@ -149,7 +149,7 @@ img {
 	height: 64px;
 	width: 64px;
 	background-position: center;
-	background-size: 64px;
+	background-size: cover;
 }
 
 #overlay {
@@ -178,6 +178,10 @@ img {
 }
 #screenshotShow canvas {
 	width: 95%;
+}
+
+#switchButtons {
+	line-height:2em;
 }
 
 #helpMenu {

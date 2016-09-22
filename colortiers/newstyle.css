@@ -1,0 +1,251 @@
+html,body{
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+	padding: 0;
+	margin: 0;
+	width:100%;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+}
+
+#controls {
+	width: 774px;
+	height: 80px;
+	margin: 0 auto;
+	padding-right: 1px;
+	text-align: left;
+	vertical-align: middle;
+}
+
+h1 {
+	font-style: italic;
+	font-weight: 100;
+	text-align: left;
+	text-transform: uppercase;
+}
+
+#controls h1 {
+	display:inline-block;
+}
+
+#buttons {
+	display:inline-block;
+	float:right;
+	margin-top:28px;
+}
+
+#tablewrap {
+	padding: 30px 0;
+	background-color: #1A1A1A;
+	width: 100%;
+	display:block;
+}
+
+td {
+	border: solid 3px black;
+	margin: 0;
+	padding: 0;
+	height: 64px;
+}
+
+tr {
+	line-height: 0px;
+}
+
+table {
+	min-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	border-spacing: 0;
+	border: solid 3px black;
+	background:#1A1A1A url("img/smashballbg.png") no-repeat bottom right;
+}
+
+.labelHolder {
+	min-width: 48px;
+	height: 64px;
+	transition: background .3s;
+}
+
+.label {
+	min-width: 56px;
+	max-width: 128px;
+	line-height: 16px;
+	text-align: center;
+	border: none;
+	font-weight: 600;
+	margin: 0;
+	display: inline-block;
+	padding: 4px;
+}
+
+.tier {
+	width: 960px;
+	min-height: 64px;
+	text-align: left;
+}
+
+.hiddenkid {
+	display:none;
+}
+
+td:last-of-type {
+	background-color: black;
+}
+
+#settings {
+	width: 64px;
+	height: 64px;
+	background: url('img/settings.png') center no-repeat;
+	cursor: pointer;
+	transition: all .3s;
+	display:inline-block;
+}
+
+#settings:hover {
+	opacity: .5;
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+#moveButtons {
+	width: 64px;
+	height: 64px;
+	display:inline-block;
+}
+div#moveUp {
+	height:32px;
+	width:64px;
+	background: url('img/arrowup.png') center no-repeat;
+	cursor: pointer;
+	transition: all .3s;
+}
+div#moveDown {
+	height:32px;
+	width:64px;
+	background: url('img/arrowdown.png') center no-repeat;
+	cursor: pointer;
+	transition: all .3s;
+}
+#moveButtons div:hover {
+	opacity: .5;
+}
+
+#char {
+	width: 1024px;
+	margin: 10px auto;
+	line-height: 0px;
+}
+
+img {
+	height: 64px;
+}
+
+.character {
+	display:inline-block;
+	height: 64px;
+	width: 64px;
+	background-position: top;
+	background-size: 64px;
+	background-color:white;
+}
+
+#overlay {
+	opacity:0;
+	visibility: hidden;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100% !important;
+    text-align:center;
+    z-index: 1000;
+	background-color:rgba(0,0,0,.5);
+	transition: opacity .3s;
+}
+
+#overlay #modalWrapper #modal,#charChange,#helpMenu,#screenshotShow {
+	position: relative;
+	display:none;
+	width: 728px;
+	margin: 0 auto;
+    background-color: #fff;
+    padding:20px;
+    text-align:center;
+	z-index: 2000;
+}
+#screenshotShow canvas {
+	width: 95%;
+}
+
+#helpMenu {
+	text-align: left;
+}
+
+#colorselect {
+	width: 720px;
+	height: 40px;
+	margin: 0 4px;
+}
+
+#colorselect span {
+	width: 48px;
+	height: 40px;
+	margin: 0;
+	display: inline-block;
+	transition: box-shadow .1s;
+	cursor: pointer;
+}
+
+#colorselect span.selected {
+	box-shadow: inset 4px 4px red,
+				inset -4px -4px red;
+}
+
+#close {
+	position: absolute;
+	top:0;
+	right:0;
+	width:16px;
+	height:16px;
+	margin:16px;
+	background:url("img/close.png");
+	opacity: .5;
+	transition: opacity .3s;
+	cursor: pointer;
+}
+#close:hover {
+	opacity:1;
+}
+
+button {
+	background: #fff;
+	box-shadow: 0 2px #dedede; /* found a way to shoehorn it back in boys */
+	border: solid 1px #dedede;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	padding: 4px 8px;
+}
+
+button:active {
+	box-shadow: 0 1px #dedede;
+	top: 1px;
+}
+
+.characterCheckWrap {
+	width: 44%;
+	display:inline-block;
+}
+
+@media (max-width: 1280px) and (max-device-width: 1280px) {
+	.tier{width:640px;}
+	table{min-width:0px;}
+}
+
+@media handheld {
+	body{width: 800px;}
+}
