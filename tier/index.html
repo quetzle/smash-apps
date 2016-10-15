@@ -88,6 +88,7 @@
 					<button id="switchBrawlMinus">Brawl Minus</button><br>
 					<button id="switchSFV">Street Fighter V</button>
 					<button id="switchGGREV">Guilty Gear Xrd -Revelator-</button>
+					<button id="switchBrawlhalla">Brawlhalla</button>
 					<button id="switchOW">Overwatch</button>
 				</div>
 				<p><strong>Changing your game will empty your tierlist!</strong> Do not click unless you are sure you want to change! You cannot undo this.</p>
@@ -138,7 +139,8 @@
 		var gameGGREV = ["ggrev","axl","bedman","chipp","elphelt","faust","ino","jacko","jam","johnny","kum","ky","leo","may","millia","potemkin","ramlethal","raven","sin","slayer","sol","venom","zato1","dizzy"];
 		var gameSSF2 = ["ssf2","mario","dk","link","kirby","samus","megaman","fox","ness","pikachu","sonic","peach","wario","zelda","sheik","metaknight","zss","bomberman","falcon","blackmage","jigglypuff","tails","yoshi","marth","lloyd","chibirobo","sora","ichigo","naruto","goku"];
 		var gameCorrinMode = ["ssb4r","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm","corrinm"];
-		var gameOW = ["ow","ana","bastion","dva","genji","hanzo","junkrat","lucio","mccree","mei","mercy","pharah","reaper","reinhardt","roadhog","soldier","symmetra","torbjorn","tracer","widowmaker","winston","zarya","zenyatta"]
+		var gameOW = ["ow","ana","bastion","dva","genji","hanzo","junkrat","lucio","mccree","mei","mercy","pharah","reaper","reinhardt","roadhog","soldier","symmetra","torbjorn","tracer","widowmaker","winston","zarya","zenyatta"];
+		var gameBrawlhalla = ["bh","ada","asuri","azoth","barraza","bodvar","brynn","cassidy","diana","ember","gnash","hattori","jhala","koji","kor","lordvraxx","lucien","orion","queennai","ragnir","scarlet","sentinel","sirroland","teros","thatch","ulgrim","val","wushang","axe","bow","gauntlet","gun","hammer","katar","lance","spear"];
 		
 		var singleTier = "<tr><td class='labelHolder' contenteditable='true' style='background-color:#FFFF7F'><span class='label'>NEW</span></td><td><div class='tier sort' id='rows'><div class='hiddenkid'></div></div></td><td><div id='settings'></div><div id='moveButtons'><div id='moveUp'></div><div id='moveDown'></div></div></td></tr>";
 		
@@ -221,6 +223,7 @@
 				case "switchSFV": changeGame(gameSFV);break;
 				case "switchGGREV": changeGame(gameGGREV);break;
 				case "switchSSF2": changeGame(gameSSF2);break;
+				case "switchBrawlhalla": changeGame(gameBrawlhalla);break;
 				case "switchOW": changeGame(gameOW);break;
 			}
 		});
@@ -301,6 +304,7 @@
 					case "sfv": changeGame(gameSFV);break;
 					case "ggrev": changeGame(gameGGREV);break;
 					case "ssf2": changeGame(gameSSF2);break;
+					case "bh": changeGame(gameBrawlhalla);break;
 					case "ow": changeGame(gameOW);break;
 				}
 				loadCode(currentGameChars[0]+"==S|0==A|1==B|3==C|5==D|7==E|8==F|9");
@@ -403,6 +407,7 @@
 				case "sfv": changeGame(gameSFV);break;
 				case "ggrev": changeGame(gameGGREV);break;
 				case "ssf2": changeGame(gameSSF2);break;
+				case "bh": changeGame(gameBrawlhalla);break;
 				case "ow": changeGame(gameOW);break;
 			}
 			for (var i = 1; i < processedCode.length; i++) {
