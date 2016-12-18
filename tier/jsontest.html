@@ -1,0 +1,40 @@
+<style>
+	.character {
+		display:inline-block;
+		height: 64px;
+		width: 64px;
+		background-position: center;
+		background-size: cover;
+	}
+</style>
+
+<div><button>Run</button>
+<h1>Default Characters</h1>
+<div id="default" class="tier"><div></div></div>
+<h1>Extra Characters</h1>
+<div id="extra" class="tier"></div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="dragula.min.js"></script>
+<script>
+	var reader = new FileReader();
+	var folder;
+	var charHTML = "<div class=\"character\"></div>";
+	
+	var data;
+	$.getJSON("data.json", function(foundJSON) {
+		data = foundJSON;
+		console.log(data);
+	});
+	
+	function addCharacter(row, name) {
+		$(charHTML).css("background-image","url('img/" + folder + "/" + name + ".png')").appendTo($(".tier:nth-of-type("+row+")"));
+	}
+	
+	$(function() {
+		$(document).on("click", "button", function() {
+			
+		});
+	});
+</script>
