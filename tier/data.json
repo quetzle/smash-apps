@@ -1,0 +1,15 @@
+let text = `
+{
+	"games": [
+		{
+			"name": "Smash 4",
+			"imageSets": [
+				{"folder": "ssb4", "name": "Screenshots"},
+				{"folder": "ssb4r", "name": "Renders"}
+			],
+			"defaultChars": ["mario","luigi","peach","bowser","yoshi","rosalinaluma","bowserjr","wario","donkeykong","diddykong","mrgamewatch","littlemac","link","zelda","sheik","ganondorf","toonlink","samus","zerosuitsamus","pit","palutena","marth","ike","robin","duckhunt","kirby","kingdedede","metaknight","fox","falco","pikachu","charizard","lucario","jigglypuff","greninja","rob","ness","captainfalcon","villager","olimar","wiifittrainer","shulk","drmario","darkpit","lucina","pacman","megaman","sonic","mewtwo","lucas","roy","ryu","cloud","corrin","bayonetta"],
+			"extraChars": ["miibrawler1","miigunner1","miisword1","miibrawler","miigunner","miisword"]
+		}
+	]
+}
+`;
