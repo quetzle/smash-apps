@@ -1,40 +1,159 @@
+<html>
+<head>
+<link href="dragula.min.css" rel="stylesheet">
 <style>
-	.character {
+	.character,.testchar {
 		display:inline-block;
 		height: 64px;
 		width: 64px;
 		background-position: center;
 		background-size: cover;
+		position: relative;
+	}
+	.handle {
+		height: 16px;
+		width: 16px;
+		background: rgba(0,0,0,.9);
+		text-align: center;
+		color: white;
+		font-family: sans-serif;
+		font-weight: 600;
+		float: right;
+		margin: 2px;
+		cursor: move;
+	}
+	.controls {
+		opacity:0;
+		transition:opacity .5s;
+		height: 64px;
+		width: 64px;
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+	.controls:hover {
+		opacity:1;
+	}
+	.left,.right,.up,.down {
+		height: 16px;
+		width: 16px;
+		background: rgba(0,0,0,.5);
+		color: white;
+		text-align: center;
+		display: inline-block;
+		position: absolute;
+		margin:2px;
+		border-radius: 2px;
+		cursor: pointer;
+	}
+	.left {
+		left: 0;
+		top: 50%;
+		margin-top:-8px;
+	}
+	.right {
+		right: 0;
+		top: 50%;
+		margin-top:-8px;
+	}
+	.up {
+		left: 50%;
+		top: 0;
+		margin-left:-8px;
+	}
+	.down {
+		left: 50%;
+		bottom: 0;
+		margin-left:-8px;
 	}
 </style>
-
-<div><button>Run</button>
+</head>
+<body>
+<div><button id="run">Run</button> - <button id="swap">Swap Images</button></div>
 <h1>Default Characters</h1>
-<div id="default" class="tier"><div></div></div>
+<div class="tier"></div>
 <h1>Extra Characters</h1>
-<div id="extra" class="tier"></div>
+<div class="tier"></div>
+<br>
+<div class="testchar" style="background-image: url('img/ssb4r/lucas.png');">
+	<span class="handle">+</span>
+	<span class="left">&#9668;</span>
+	<span class="up">&#9650;</span>
+	<span class="down">&#9660;</span>
+	<span class="right">&#9658;</span>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="dragula.min.js"></script>
+<script src="data.json"></script>
 <script>
-	var reader = new FileReader();
 	var folder;
-	var charHTML = "<div class=\"character\"></div>";
-	
-	var data;
-	$.getJSON("data.json", function(foundJSON) {
-		data = foundJSON;
-		console.log(data);
-	});
+	var charHTML = "<div class=\"character\"><div class=\"controls\"><span class=\"handle\">+</span><span class=\"left\">&#9668;</span><span class=\"up\">&#9650;</span><span class=\"down\">&#9660;</span><span class=\"right\">&#9658;</span></div></div>";
+	var data = JSON.parse(text);
 	
 	function addCharacter(row, name) {
-		$(charHTML).css("background-image","url('img/" + folder + "/" + name + ".png')").appendTo($(".tier:nth-of-type("+row+")"));
+		console.log(row + " " + name);
+		$(charHTML).css("background-image","url('img/" + folder + "/" + name + ".png')").attr("id",name).appendTo($(".tier:eq("+row+")"));
 	}
 	
-	$(function() {
-		$(document).on("click", "button", function() {
-			
+	function loadJSON() {
+		folder = data.games[0].imageSets[0].folder;
+		for (i in data.games[0].defaultChars)
+			addCharacter(0, data.games[0].defaultChars[i]);
+		for (i in data.games[0].extraChars)
+			addCharacter(1, data.games[0].extraChars[i]);
+	}
+	
+	function changeImages() {
+		if (folder == data.games[0].imageSets[0].folder)
+			folder = data.games[0].imageSets[1].folder;
+		else
+			folder = data.games[0].imageSets[0].folder;
+		$(".character").each(function(index) {
+			$(this).css("background-image","url('img/" + folder + "/" + $(this).attr("id") + ".png')")
 		});
+	}
+	
+	$(document).ready(function() {
+		console.log("Document loaded.");
+		
+		$(document).on("click", "#run", function() {
+			loadJSON();
+		});
+		$(document).on("click", "#swap", function() {
+			changeImages();
+		});
+		
+		$(document).on("click", ".left", function() {
+			console.log("left");
+			$(this).closest(".character").insertBefore($(this).closest(".character").prev());
+		});
+		$(document).on("click", ".right", function() {
+			console.log("right");
+			$(this).closest(".character").insertAfter($(this).closest(".character").next());
+		});
+		$(document).on("click", ".up", function() {
+			console.log("up");
+			$(this).closest(".character").appendTo($(this).closest(".tier").prevAll(".tier:first"));
+		});
+		$(document).on("click", ".down", function() {
+			console.log("down");
+			$(this).closest(".character").prependTo($(this).closest(".tier").nextAll(".tier:first"));
+		});
+		
+		dragula({
+			isContainer: function (el) {
+				return el.classList.contains('tier');
+			},
+			moves: function (el, container, handle) {
+				return handle.classList.contains('handle');
+			}
+		})
 	});
 </script>
+</body>
+</html>
