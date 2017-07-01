@@ -101,10 +101,8 @@
 	
 	function loadJSON() {
 		folder = data.games[0].imageSets[0].folder;
-		for (i in data.games[0].defaultChars)
-			addCharacter(0, data.games[0].defaultChars[i]);
-		for (i in data.games[0].extraChars)
-			addCharacter(1, data.games[0].extraChars[i]);
+		for (i in data.games[0].characters)
+			addCharacter((data.games[0].characters[i].main ? 0 : 1), data.games[0].characters[i].name);
 	}
 	
 	function changeImages() {

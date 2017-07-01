@@ -1,0 +1,121 @@
+body {
+	font-family: Arial, sans-serif;
+}
+#tier-list {
+	border: 2px solid black;
+	border-collapse: collapse;
+	background:#1A1A1A;
+}
+td {
+	border: 2px solid black;
+	padding:0;
+}
+.label {
+	min-width: 62px;
+	max-width: 126px;
+	min-height: 64px;
+	text-align: center;
+	padding: 2px;
+	font-weight: bold;
+}
+.tier {
+	font-size: 0;
+}
+.row-controls {
+	font-size: 0;
+	position: relative;
+	padding: 0 2px 0 2px;
+	background: black;
+}
+.row-movement {
+	display: inline-block;
+	height: 64px;
+	width: 32px;
+}
+.move-up, .move-down {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+}
+.move-up {
+	background: url('img/arrowup.png') center no-repeat;
+}
+.move-down {
+	background: url('img/arrowdown.png') center no-repeat;
+}
+.settings {
+	width: 54px;
+	max-width: 54px;
+	height: 64px;
+	max-height: 64px;
+	display: inline-block;
+	background: url('img/settings.png') center no-repeat;
+}
+.character {
+	display:inline-block;
+	height: 64px;
+	width: 64px;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	margin: 0;
+	font-size: initial;
+}
+.char-settings {
+	height: 16px;
+	width: 16px;
+	background: rgba(0,0,0,.9);
+	text-align: center;
+	color: white;
+	font-size: initial;
+	float: right;
+	margin: 2px;
+	cursor: pointer;
+}
+.char-controls {
+	opacity:0;
+	transition:opacity .5s;
+	height: 64px;
+	width: 64px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.char-controls:hover {
+	opacity:1;
+}
+.left,.right,.up,.down {
+	height: 16px;
+	width: 16px;
+	background: rgba(0,0,0,.5);
+	color: white;
+	text-align: center;
+	display: inline-block;
+	position: absolute;
+	margin:2px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.left {
+	left: 0;
+	top: 50%;
+	margin-top:-8px;
+}
+.right {
+	right: 0;
+	top: 50%;
+	margin-top:-8px;
+}
+.up {
+	left: 50%;
+	top: 0;
+	margin-left:-8px;
+}
+.down {
+	left: 50%;
+	bottom: 0;
+	margin-left:-8px;
+}
