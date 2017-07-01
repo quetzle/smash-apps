@@ -1,3 +1,8 @@
+let order = [
+	{"name": "Smash", "games": [0,1,2,3]},		// Smash 4, Melee, Smash 64, Brawl
+	{"name": "Smash-like", "games": [4]}		// Project M
+];
+
 let games =
 [
 	{
@@ -104,6 +109,123 @@ let games =
 			{"name": "gnw", "main": true, "imageSets": [true]},
 			{"name": "marth", "main": true, "imageSets": [true]},
 			{"name": "roy", "main": true, "imageSets": [true]}
+		]
+	},
+	{
+		"custom": false,
+		"name": "Smash 64",
+		"imageSets": [
+			{"folder": "64", "name": "Screenshots"}
+		],
+		"characters": [
+			{"name": "luigi", "main": true, "imageSets": [true]},
+			{"name": "mario", "main": true, "imageSets": [true]},
+			{"name": "dk", "main": true, "imageSets": [true]},
+			{"name": "link", "main": true, "imageSets": [true]},
+			{"name": "samus", "main": true, "imageSets": [true]},
+			{"name": "falcon", "main": true, "imageSets": [true]},
+			{"name": "ness", "main": true, "imageSets": [true]},
+			{"name": "yoshi", "main": true, "imageSets": [true]},
+			{"name": "kirby", "main": true, "imageSets": [true]},
+			{"name": "fox", "main": true, "imageSets": [true]},
+			{"name": "pikachu", "main": true, "imageSets": [true]},
+			{"name": "jigglypuff", "main": true, "imageSets": [true]}
+		]
+	},
+	{
+		"custom": false,
+		"name": "Brawl",
+		"imageSets": [
+			{"folder": "brawl", "name": "Screenshots"}
+		],
+		"characters": [
+			{"name": "mario", "main": true, "imageSets": [true]},
+			{"name": "luigi", "main": true, "imageSets": [true]},
+			{"name": "peach", "main": true, "imageSets": [true]},
+			{"name": "bowser", "main": true, "imageSets": [true]},
+			{"name": "donkeykong", "main": true, "imageSets": [true]},
+			{"name": "diddykong", "main": true, "imageSets": [true]},
+			{"name": "yoshi", "main": true, "imageSets": [true]},
+			{"name": "wario", "main": true, "imageSets": [true]},
+			{"name": "link", "main": true, "imageSets": [true]},
+			{"name": "zelda", "main": true, "imageSets": [true]},
+			{"name": "sheik", "main": true, "imageSets": [true]},
+			{"name": "ganondorf", "main": true, "imageSets": [true]},
+			{"name": "toonlink", "main": true, "imageSets": [true]},
+			{"name": "samus", "main": true, "imageSets": [true]},
+			{"name": "zerosuitsamus", "main": true, "imageSets": [true]},
+			{"name": "pit", "main": true, "imageSets": [true]},
+			{"name": "iceclimbers", "main": true, "imageSets": [true]},
+			{"name": "rob", "main": true, "imageSets": [true]},
+			{"name": "kirby", "main": true, "imageSets": [true]},
+			{"name": "metaknight", "main": true, "imageSets": [true]},
+			{"name": "kingdedede", "main": true, "imageSets": [true]},
+			{"name": "olimar", "main": true, "imageSets": [true]},
+			{"name": "fox", "main": true, "imageSets": [true]},
+			{"name": "falco", "main": true, "imageSets": [true]},
+			{"name": "wolf", "main": true, "imageSets": [true]},
+			{"name": "captainfalcon", "main": true, "imageSets": [true]},
+			{"name": "pikachu", "main": true, "imageSets": [true]},
+			{"name": "pokemontrainer", "main": true, "imageSets": [true]},
+			{"name": "lucario", "main": true, "imageSets": [true]},
+			{"name": "jigglypuff", "main": true, "imageSets": [true]},
+			{"name": "marth", "main": true, "imageSets": [true]},
+			{"name": "ike", "main": true, "imageSets": [true]},
+			{"name": "ness", "main": true, "imageSets": [true]},
+			{"name": "lucas", "main": true, "imageSets": [true]},
+			{"name": "mrgamewatch", "main": true, "imageSets": [true]},
+			{"name": "snake", "main": true, "imageSets": [true]},
+			{"name": "sonic", "main": true, "imageSets": [true]}
+		]
+	},
+	{
+		"custom": false,
+		"name": "Project M",
+		"imageSets": [
+			{"folder": "pm", "name": "Screenshots"}
+		],
+		"characters": [
+			{"name": "wario", "main": true, "imageSets": [true]},
+			{"name": "mario", "main": true, "imageSets": [true]},
+			{"name": "luigi", "main": true, "imageSets": [true]},
+			{"name": "peach", "main": true, "imageSets": [true]},
+			{"name": "bowser", "main": true, "imageSets": [true]},
+			{"name": "yoshi", "main": true, "imageSets": [true]},
+			{"name": "donkeykong", "main": true, "imageSets": [true]},
+			{"name": "diddykong", "main": true, "imageSets": [true]},
+			{"name": "falcon", "main": true, "imageSets": [true]},
+			{"name": "wolf", "main": true, "imageSets": [true]},
+			{"name": "fox", "main": true, "imageSets": [true]},
+			{"name": "falco", "main": true, "imageSets": [true]},
+			{"name": "icies", "main": true, "imageSets": [true]},
+			{"name": "zelda", "main": true, "imageSets": [true]},
+			{"name": "sheik", "main": true, "imageSets": [true]},
+			{"name": "link", "main": true, "imageSets": [true]},
+			{"name": "toonlink", "main": true, "imageSets": [true]},
+			{"name": "ganon", "main": true, "imageSets": [true]},
+			{"name": "mewtwo", "main": true, "imageSets": [true]},
+			{"name": "lucario", "main": true, "imageSets": [true]},
+			{"name": "pikachu", "main": true, "imageSets": [true]},
+			{"name": "jigglypuff", "main": true, "imageSets": [true]},
+			{"name": "squirtle", "main": true, "imageSets": [true]},
+			{"name": "ivysaur", "main": true, "imageSets": [true]},
+			{"name": "charizard", "main": true, "imageSets": [true]},
+			{"name": "samus", "main": true, "imageSets": [true]},
+			{"name": "zerosuit", "main": true, "imageSets": [true]},
+			{"name": "lucas", "main": true, "imageSets": [true]},
+			{"name": "ness", "main": true, "imageSets": [true]},
+			{"name": "pit", "main": true, "imageSets": [true]},
+			{"name": "kirby", "main": true, "imageSets": [true]},
+			{"name": "metaknight", "main": true, "imageSets": [true]},
+			{"name": "dedede", "main": true, "imageSets": [true]},
+			{"name": "ike", "main": true, "imageSets": [true]},
+			{"name": "marth", "main": true, "imageSets": [true]},
+			{"name": "roy", "main": true, "imageSets": [true]},
+			{"name": "olimar", "main": true, "imageSets": [true]},
+			{"name": "rob", "main": true, "imageSets": [true]},
+			{"name": "gnw", "main": true, "imageSets": [true]},
+			{"name": "snake", "main": true, "imageSets": [true]},
+			{"name": "sonic", "main": true, "imageSets": [true]}
 		]
 	}
 ];

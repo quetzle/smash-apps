@@ -28,8 +28,14 @@ $(document).ready(function() {
 	console.log(games);
 	
 	// load games into dropdown menu
-	for (var i in games)
-		gameList.push("<option value=\"" + i + "\">" + games[i].name + "</option>");
+	for (var i in order) {
+		gameList.push("<optgroup label=\"" + order[i].name + "\">");
+		for (var k in order[i].games) {
+			var gameId = Number(order[i].games[k]);
+			gameList.push("<option value=\"" + gameId + "\">" + games[gameId].name + "</option>");
+		}
+		gameList.push("</optgroup>");
+	}
 	$("#game-select").append(gameList.join(""));
 	
 	$(document).on("click", "#go", function() {
