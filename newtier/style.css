@@ -38,10 +38,10 @@ td {
 	height: 32px;
 }
 .move-up {
-	background: url('img/arrowup.png') center no-repeat;
+	background: url('img/chevronup.png') center no-repeat;
 }
 .move-down {
-	background: url('img/arrowdown.png') center no-repeat;
+	background: url('img/chevrondown.png') center no-repeat;
 }
 .settings {
 	width: 54px;
@@ -64,16 +64,22 @@ td {
 .char-settings {
 	height: 16px;
 	width: 16px;
-	background: rgba(0,0,0,.9);
 	text-align: center;
 	color: white;
 	font-size: initial;
 	float: right;
 	margin: 2px;
 	cursor: pointer;
+	background: rgba(0,0,0,.9);
+	background-image: url('img/add.png');
+	background-position: center;
+	background-size: 12px;
+	background-repeat: no-repeat;
 }
 .char-controls {
-	opacity:0;
+	-moz-opacity: 0;
+	opacity: 0;
+	filter: 0;
 	transition:opacity .5s;
 	height: 64px;
 	width: 64px;
@@ -83,6 +89,8 @@ td {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	filter: inherit;
+	font-size: initial;
 }
 .char-controls:hover {
 	opacity:1;
@@ -103,19 +111,35 @@ td {
 	left: 0;
 	top: 50%;
 	margin-top:-8px;
+	background-image: url('img/arrowleft.png');
+	background-position: center;
+	background-size: 12px;
+	background-repeat: no-repeat;
 }
 .right {
 	right: 0;
 	top: 50%;
 	margin-top:-8px;
+	background-image: url('img/arrowright.png');
+	background-position: center;
+	background-size: 12px;
+	background-repeat: no-repeat;
 }
 .up {
 	left: 50%;
 	top: 0;
 	margin-left:-8px;
+	background-image: url('img/arrowup.png');
+	background-position: center;
+	background-size: 12px;
+	background-repeat: no-repeat;
 }
 .down {
 	left: 50%;
 	bottom: 0;
 	margin-left:-8px;
+	background-image: url('img/arrowdown.png');
+	background-position: center;
+	background-size: 12px;
+	background-repeat: no-repeat;
 }

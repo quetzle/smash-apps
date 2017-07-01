@@ -11,7 +11,7 @@ var gameList = [];			// list of game options, used for filling dropdowns
 var imageSetList = [];		// list of image set options for current game, used for filling dropdowns
 var characterList = [];		// list of character images, used for filling tier lists or during setup
 
-var charHTML = "<div class=\"character\"><div class=\"char-controls\"><span class=\"char-settings\">+</span><span class=\"left\">&#9668;</span><span class=\"up\">&#9650;</span><span class=\"down\">&#9660;</span><span class=\"right\">&#9658;</span></div></div>";		// html for a character icon
+var charHTML = "<div class=\"character\"><div class=\"char-controls\"><span class=\"char-settings\"></span><span class=\"left\"></span><span class=\"up\"></span><span class=\"down\"></span><span class=\"right\"></span></div></div>";		// html for a character icon
 var colors = ["#FF7F7F","#FFBF7F","#FFDF7F","#FFFF7F","#BFFF7F","#7FFF7F","#7FFFFF","#7FBFFF","#7F7FFF","#FF7FFF","#BF7FBF","#3B3B3A","#858585","#CFCFCF","#F7F7F7"];		// default tier label colors
 
 function addCharacter(id, row, name) {
@@ -44,9 +44,14 @@ $(document).ready(function() {
 		currentGameId = Number($("#game-select option:selected").val());
 		console.log(currentGameId);
 		imageSetList = [];
-		for (var i in games[currentGameId].imageSets)
-			imageSetList.push("<option value=\"" + i + "\">" + games[currentGameId].imageSets[i].name + "</option>");
-		$("#imageset-select").append(imageSetList.join(""));
+		if (isNaN(currentGameId)) {
+			$("#imageset-select").html("");
+		} else {
+			for (var i in games[currentGameId].imageSets)
+				imageSetList.push("<option value=\"" + i + "\">" + games[currentGameId].imageSets[i].name + "</option>");
+			$("#imageset-select").html("");
+			$("#imageset-select").append(imageSetList.join(""));
+		}
 	});
 	$(document).on("change", "#imageset-select", function() {
 		currentImageSetId = Number($("#imageset-select option:selected").val());

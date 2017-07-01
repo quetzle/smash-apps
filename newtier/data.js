@@ -78,6 +78,32 @@ let games =
 			{"folder": "melee", "name": "Screenshots"}
 		],
 		"characters": [
+			{"name": "drmario", "main": true, "imageSets": [true]},
+			{"name": "mario", "main": true, "imageSets": [true]},
+			{"name": "luigi", "main": true, "imageSets": [true]},
+			{"name": "bowser", "main": true, "imageSets": [true]},
+			{"name": "peach", "main": true, "imageSets": [true]},
+			{"name": "yoshi", "main": true, "imageSets": [true]},
+			{"name": "dk", "main": true, "imageSets": [true]},
+			{"name": "falcon", "main": true, "imageSets": [true]},
+			{"name": "ganon", "main": true, "imageSets": [true]},
+			{"name": "falco", "main": true, "imageSets": [true]},
+			{"name": "fox", "main": true, "imageSets": [true]},
+			{"name": "ness", "main": true, "imageSets": [true]},
+			{"name": "icies", "main": true, "imageSets": [true]},
+			{"name": "kirby", "main": true, "imageSets": [true]},
+			{"name": "samus", "main": true, "imageSets": [true]},
+			{"name": "zelda", "main": true, "imageSets": [true]},
+			{"name": "sheik", "main": true, "imageSets": [true]},
+			{"name": "link", "main": true, "imageSets": [true]},
+			{"name": "ylink", "main": true, "imageSets": [true]},
+			{"name": "pichu", "main": true, "imageSets": [true]},
+			{"name": "pikachu", "main": true, "imageSets": [true]},
+			{"name": "jigglypuff", "main": true, "imageSets": [true]},
+			{"name": "mewtwo", "main": true, "imageSets": [true]},
+			{"name": "gnw", "main": true, "imageSets": [true]},
+			{"name": "marth", "main": true, "imageSets": [true]},
+			{"name": "roy", "main": true, "imageSets": [true]}
 		]
 	}
 ];
