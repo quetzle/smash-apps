@@ -1,6 +1,9 @@
+/* General */
 body {
 	font-family: Arial, sans-serif;
 }
+
+/* Tier list */
 #tier-list {
 	border: 2px solid black;
 	border-collapse: collapse;
@@ -20,6 +23,7 @@ td {
 }
 .tier {
 	font-size: 0;
+	min-width: 512px;
 }
 .row-controls {
 	font-size: 0;
@@ -51,6 +55,8 @@ td {
 	display: inline-block;
 	background: url('img/settings.png') center no-repeat;
 }
+
+/* Character images */
 .character {
 	display:inline-block;
 	height: 64px;
@@ -142,4 +148,51 @@ td {
 	background-position: center;
 	background-size: 12px;
 	background-repeat: no-repeat;
+}
+
+/* Modals */
+.modal-wrap {
+	opacity:0;
+	visibility: hidden;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width:100%;
+    height:100% !important;
+    text-align:center;
+    z-index: 1000;
+	background-color:rgba(0,0,0,.5);
+	transition: opacity .3s;
+	padding-top: 100px;
+}
+.modal {
+	position: relative;
+	width: 728px;
+	margin: 0 auto;
+    background-color: #fff;
+    padding: 60px;
+    text-align: left;
+	z-index: 2000;
+	display: none;
+}
+.modal-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 16px;
+	height: 16px;
+	margin: 16px !important;
+	background: url("img/close.png");
+	opacity: .5;
+	transition: opacity .3s;
+	cursor: pointer;
+}
+.modal-close:hover {
+	opacity: 1;
+}
+.modal h2 {
+	margin-top: 0;
+}
+.modal div {
+	margin: 5px 0 5px 0;
 }

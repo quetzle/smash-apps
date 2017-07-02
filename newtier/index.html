@@ -12,15 +12,6 @@
 		<tr class="row">
 			<td class="label"><div contenteditable>S</div></td>
 			<td class="tier">
-				<div class="character" style="background-image: url('img/ssb4r/lucas.png');">
-					<div class="char-controls">
-						<span class="char-settings"></span>
-						<span class="left"></span>
-						<span class="up"></span>
-						<span class="down"></span>
-						<span class="right"></span>
-					</div>
-				</div>
 			</td>
 			<td class="row-controls">
 				<div class="row-movement">
@@ -33,15 +24,6 @@
 		<tr class="row">
 			<td class="label"><div contenteditable>S</div></td>
 			<td class="tier">
-				<div class="character" style="background-image: url('img/ssb4r/lucas.png');">
-					<div class="char-controls">
-						<span class="char-settings"></span>
-						<span class="left"></span>
-						<span class="up"></span>
-						<span class="down"></span>
-						<span class="right"></span>
-					</div>
-				</div>
 			</td>
 			<td class="row-controls">
 				<div class="row-movement">
@@ -55,8 +37,11 @@
 	
 	<div class="tier bin"></div>
 	
+	<div><button data-modal="char-settings" class="modal-button">Character settings</button> <button data-modal="setup" class="modal-button">Setup</button></div>
+	
 	<div class="modal-wrap">
 		<div class="modal modal-setup">
+			<div class="modal-close"></div>
 			<h2>Setup</h2>
 			<div class="modal-setup-buttons">
 				<div>Select game:
@@ -68,8 +53,17 @@
 					<select id="imageset-select">
 					</select>
 				</div>
-				<div><button id="go">Go</button></div>
+				<div><button id="setup-go">Go</button></div>
 			</div>
+		</div>
+		
+		<div class="modal modal-char-settings">
+			<div class="modal-close"></div>
+			<h2>Character Settings</h2>
+			<div>Game ID: <input id="settings-game-id"></input></div>
+			<div>Image set: <input id="settings-image-set"></input></div>
+			<div>Char ID: <input id="settings-char-id"></input></div>
+			<button id="settings-go">Go</button>
 		</div>
 	</div>
 	
