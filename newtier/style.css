@@ -5,12 +5,12 @@ body {
 
 /* Tier list */
 #tier-list {
-	border: 2px solid black;
+	border: 3px solid black;
 	border-collapse: collapse;
 	background:#1A1A1A;
 }
 td {
-	border: 2px solid black;
+	border: 3px solid black;
 	padding:0;
 }
 .label {
@@ -20,6 +20,7 @@ td {
 	text-align: center;
 	padding: 2px;
 	font-weight: bold;
+	transition: background .3s;
 }
 .tier {
 	font-size: 0;
@@ -195,4 +196,25 @@ td {
 }
 .modal div {
 	margin: 5px 0 5px 0;
+}
+
+/* Individual modals */
+#color-select {
+	width: 720px;
+	height: 40px;
+	margin: 0 4px;
+}
+
+#color-select span {
+	width: 48px;
+	height: 40px;
+	margin: 0;
+	display: inline-block;
+	transition: box-shadow .1s;
+	cursor: pointer;
+}
+
+#color-select span.selected {
+	box-shadow: inset 4px 4px red,
+				inset -4px -4px red;
 }

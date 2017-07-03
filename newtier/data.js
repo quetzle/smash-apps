@@ -1,4 +1,5 @@
-let order = [
+let order =
+[
 	{"name": "Smash", "games": [0,1,2,3]},		// Smash 4, Melee, Smash 64, Brawl
 	{"name": "Smash-like", "games": [4]}		// Project M
 ];
@@ -6,7 +7,6 @@ let order = [
 let games =
 [
 	{
-		"custom": false,
 		"name": "Smash 4",
 		"imageSets": [
 			{"folder": "ssb4", "name": "Screenshots"},
@@ -77,7 +77,6 @@ let games =
 		]
 	},
 	{
-		"custom": false,
 		"name": "Melee",
 		"imageSets": [
 			{"folder": "melee", "name": "Screenshots"}
@@ -112,7 +111,6 @@ let games =
 		]
 	},
 	{
-		"custom": false,
 		"name": "Smash 64",
 		"imageSets": [
 			{"folder": "64", "name": "Screenshots"}
@@ -133,7 +131,6 @@ let games =
 		]
 	},
 	{
-		"custom": false,
 		"name": "Brawl",
 		"imageSets": [
 			{"folder": "brawl", "name": "Screenshots"}
@@ -179,7 +176,6 @@ let games =
 		]
 	},
 	{
-		"custom": false,
 		"name": "Project M",
 		"imageSets": [
 			{"folder": "pm", "name": "Screenshots"}
@@ -230,25 +226,19 @@ let games =
 	}
 ];
 
-let Game = `
-{
-	"custom": = false,
-	"name": "",
-	"imageSets": [],
-	"defaultChars": [],
-	"extraChars": []
-}
-`;
 
-let Save = `
-{
-	"name": "",
-	"custom": = false,
-	"game": = 0,
-	"tiers": [
-		{"label": "", "color": "", "characters": [
-			{"folder": "", "name": "", "label": "", "url": ""}
-		]}
-	]
-}
-`;
+let saves = 
+[
+	{
+		"name": "File 1",
+		"tiers": [
+			{"label": "S", "color": 0, "characters": []},
+			{"label": "A", "color": 1, "characters": []},
+			{"label": "B", "color": 3, "characters": []},
+			{"label": "C", "color": 5, "characters": []},
+			{"label": "D", "color": 7, "characters": []},
+			{"label": "E", "color": 8, "characters": []},
+			{"label": "F", "color": 9, "characters": []}
+		]
+	}
+];

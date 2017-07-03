@@ -37,7 +37,12 @@
 	
 	<div class="tier bin"></div>
 	
-	<div><button data-modal="char-settings" class="modal-button">Character settings</button> <button data-modal="setup" class="modal-button">Setup</button></div>
+	<div>
+		<button data-modal="char-settings" class="modal-button">Character settings</button>
+		<button data-modal="setup" class="modal-button">Setup</button>
+		<button data-modal="tier-settings" class="modal-button">Tier</button>
+		<button data-modal="files" class="modal-button">Save/Load</button>
+	</div>
 	
 	<div class="modal-wrap">
 		<div class="modal modal-setup">
@@ -64,6 +69,27 @@
 			<div>Image set: <input id="settings-image-set"></input></div>
 			<div>Char ID: <input id="settings-char-id"></input></div>
 			<button id="settings-go">Go</button>
+		</div>
+		
+		<div class="modal modal-tier-settings">
+			<div class="modal-close"></div>
+			<h2>Tier Settings</h2>
+			<div id="color-select">
+				<span style="background:#FF7F7F" data-color="0"></span><span style="background:#FFBF7F" data-color="1"></span><span style="background:#FFDF7F" data-color="2"></span><span style="background:#FFFF7F" data-color="3"></span><span style="background:#BFFF7F" data-color="4"></span><span style="background:#7FFF7F" data-color="5"></span><span style="background:#7FFFFF" data-color="6"></span><span style="background:#7FBFFF" data-color="7"></span><span style="background:#7F7FFF" data-color="8"></span><span style="background:#FF7FFF" data-color="9"></span><span style="background:#BF7FBF" data-color="10"></span><span style="background:#3B3B3B" data-color="11"></span><span style="background:#858585" data-color="12"></span><span style="background:#CFCFCF" data-color="13"></span><span style="background:#F7F7F7" data-color="14">
+			</div>
+			<div>Hex code: <input id="custom-color"></input> <button id="submit-color">Submit</button></div>
+			<div>Label name:</div><textarea id="label-name"></textarea>
+			<div>Row functions:</div>
+			<div><button id="delete-row">Delete row</button> <button id="clear-row">Clear row</button></div>
+			<div><button id="add-row-up">Add row above</button> <button id="add-row-down">Add row below</button></div>
+		</div>
+		
+		<div class="modal modal-files">
+			<div class="modal-close"></div>
+			<h2>Save/Load</h2>
+			<div><button id="#save">Save</button></div>
+			<div><button id="#save-as">Save as...</button> <input id="file-name"></input></div>
+			<div><button id="#load">Load</button></div>
 		</div>
 	</div>
 	
